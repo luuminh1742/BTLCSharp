@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\HomeBLL.cs" />
+    <Compile Include="DAL\DAL.cs" />
     <Compile Include="DTO\AbstractDTO.cs" />
     <Compile Include="DTO\BillDTO.cs" />
     <Compile Include="DTO\HouseDTO.cs" />
@@ -146,10 +148,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="database\create_table.txt" />
     <None Include="Image\user_settings_checked_32px.png" />
