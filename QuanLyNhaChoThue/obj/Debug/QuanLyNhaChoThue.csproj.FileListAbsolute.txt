@@ -1,0 +1,12 @@
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\bin\Debug\QuanLyNhaChoThue.exe.config
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\bin\Debug\QuanLyNhaChoThue.exe
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\bin\Debug\QuanLyNhaChoThue.pdb
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.csprojAssemblyReference.cache
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.FormMain.resources
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.Properties.Resources.resources
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.csproj.GenerateResource.cache
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.csproj.CoreCompileInputs.cache
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.exe
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.pdb
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.AccountSetting.FormPasswordEdit.resources
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.Home.UC_Home.resources

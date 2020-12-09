@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3634CE9F-EB4C-450F-86C1-F6E9B72E1667}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyNhaChoThue</RootNamespace>
+    <AssemblyName>QuanLyNhaChoThue</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\AbstractDTO.cs" />
+    <Compile Include="DTO\BillDTO.cs" />
+    <Compile Include="DTO\HouseDTO.cs" />
+    <Compile Include="DTO\MemberDTO.cs" />
+    <Compile Include="DTO\RoomDTO.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="GUI\AccountSetting\FormManageAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AccountSetting\FormManageAcc.Designer.cs">
+      <DependentUpon>FormManageAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AccountSetting\FormPasswordEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AccountSetting\FormPasswordEdit.Designer.cs">
+      <DependentUpon>FormPasswordEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AccountSetting\FormUpdateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AccountSetting\FormUpdateAccount.Designer.cs">
+      <DependentUpon>FormUpdateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Home\UC_Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\UC_Home.Designer.cs">
+      <DependentUpon>UC_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\FormHouseEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\FormHouseEdit.Designer.cs">
+      <DependentUpon>FormHouseEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\Room\FormCreateBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\Room\FormCreateBill.Designer.cs">
+      <DependentUpon>FormCreateBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\Room\FormRoomEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\Room\FormRoomEdit.Designer.cs">
+      <DependentUpon>FormRoomEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\Room\Member\FormMemberEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\Room\Member\FormMemberEdit.Designer.cs">
+      <DependentUpon>FormMemberEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AccountSetting\FormPasswordEdit.resx">
+      <DependentUpon>FormPasswordEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\UC_Home.resx">
+      <DependentUpon>UC_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database\create_table.txt" />
+    <None Include="Image\user_settings_checked_32px.png" />
+    <None Include="Image\user_settings_32px.png" />
+    <None Include="Image\house_32px.png" />
+    <None Include="Image\house_checked_32px.png" />
+    <Content Include="Image\icons8_home_50.png" />
+    <None Include="Image\icon_trang_chu_32px.png" />
+    <None Include="Image\icon_trang-chu_checked_32px.png" />
+    <Content Include="Image\icon_user_home.jpg" />
+    <None Include="Image\sign_out_32px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
