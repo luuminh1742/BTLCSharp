@@ -63,6 +63,16 @@ namespace QuanLyNhaChoThue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _60290_blue_brand_font_button_free_png_hq {
+            get {
+                object obj = ResourceManager.GetObject("60290-blue-brand-font-button-free-png-hq", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap house_32px {
             get {
                 object obj = ResourceManager.GetObject("house_32px", resourceCulture);
@@ -106,6 +116,16 @@ namespace QuanLyNhaChoThue.Properties {
         internal static System.Drawing.Bitmap icon_user_home {
             get {
                 object obj = ResourceManager.GetObject("icon_user_home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_user_home1 {
+            get {
+                object obj = ResourceManager.GetObject("icon_user_home1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

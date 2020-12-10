@@ -10,3 +10,6 @@ C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.ex
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.pdb
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.AccountSetting.FormPasswordEdit.resources
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.Home.UC_Home.resources
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.AccountSetting.UC_ManageAccount.resources
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.Room.FormRoomEdit.resources
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.UC_HouseManagement.resources

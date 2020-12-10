@@ -1,5 +1,4 @@
 ﻿using QuanLyNhaChoThue.GUI;
-using QuanLyNhaChoThue.GUI.AccountSetting;
 using System;
 using System.Windows.Forms;
 

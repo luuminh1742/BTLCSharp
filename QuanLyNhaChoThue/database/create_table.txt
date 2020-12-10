@@ -14,7 +14,7 @@ go
 use QuanLyNhaThue
 go
 Create table [User] (
-	[Id] Integer Identity NOT NULL,
+	[Id] Integer Identity,
 	[UserName] Varchar(200) NULL,
 	[Password] Varchar(255) NULL,
 	[FullName] Nvarchar(100) NULL,
@@ -29,7 +29,7 @@ Primary Key  ([Id])
 go
 
 Create table [House] (
-	[Id] Integer Identity NOT NULL,
+	[Id] Integer Identity,
 	[Name] Nvarchar(200) NULL,
 	[Address] Nvarchar(255) NULL,
 	[Description] Text NULL,
@@ -39,7 +39,7 @@ Primary Key  ([Id])
 go
 
 Create table [Room] (
-	[Id] Integer Identity NOT NULL,
+	[Id] Integer Identity,
 	[HouseId] Integer NOT NULL,
 	[RoomName] Nvarchar(50) NOT NULL,
 	[RoomMoney] Integer NOT NULL,
@@ -66,7 +66,7 @@ Primary Key  ([UserId],[RoomId])
 go
 
 Create table [Bill] (
-	[Id] Integer Identity NOT NULL,
+	[Id] Integer Identity ,
 	[RoomId] Integer NOT NULL,
 	[MemberName] Nvarchar(255) NULL,
 	[RoomMoney] Integer NULL,

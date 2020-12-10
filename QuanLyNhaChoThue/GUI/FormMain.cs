@@ -82,17 +82,19 @@ namespace QuanLyNhaChoThue.GUI
         private void btnHome_Click(object sender, EventArgs e)
         {
             setCheckedMenu(btnHome);
+            uC_Home1.BringToFront();
         }
 
         private void btnHouseManagement_Click(object sender, EventArgs e)
         {
             setCheckedMenu(btnHouseManagement);
-            
+            uC_HouseManagement1.BringToFront();
         }
 
         private void btnAccountSetting_Click(object sender, EventArgs e)
         {
             setCheckedMenu(btnAccountSetting);
+            uC_ManageAccount1.BringToFront();
            
         }
     }

@@ -54,12 +54,6 @@
     <Compile Include="DTO\MemberDTO.cs" />
     <Compile Include="DTO\RoomDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
-    <Compile Include="GUI\AccountSetting\FormManageAcc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\AccountSetting\FormManageAcc.Designer.cs">
-      <DependentUpon>FormManageAcc.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\AccountSetting\FormPasswordEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +65,12 @@
     </Compile>
     <Compile Include="GUI\AccountSetting\FormUpdateAccount.Designer.cs">
       <DependentUpon>FormUpdateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AccountSetting\UC_ManageAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AccountSetting\UC_ManageAccount.Designer.cs">
+      <DependentUpon>UC_ManageAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormLogin.cs">
       <SubType>Form</SubType>
@@ -114,16 +114,31 @@
     <Compile Include="GUI\HouseManagement\Room\Member\FormMemberEdit.Designer.cs">
       <DependentUpon>FormMemberEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HouseManagement\UC_HouseManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\UC_HouseManagement.Designer.cs">
+      <DependentUpon>UC_HouseManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\AccountSetting\FormPasswordEdit.resx">
       <DependentUpon>FormPasswordEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AccountSetting\UC_ManageAccount.resx">
+      <DependentUpon>UC_ManageAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Home\UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HouseManagement\Room\FormRoomEdit.resx">
+      <DependentUpon>FormRoomEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HouseManagement\UC_HouseManagement.resx">
+      <DependentUpon>UC_HouseManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -28,24 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAccountSetting = new System.Windows.Forms.Button();
             this.btnHouseManagement = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.imageMenu = new System.Windows.Forms.ImageList(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.uC_Home1 = new QuanLyNhaChoThue.GUI.Home.UC_Home();
+            this.uC_ManageAccount1 = new QuanLyNhaChoThue.GUI.AccountSetting.UC_ManageAccount();
+            this.uC_HouseManagement1 = new QuanLyNhaChoThue.GUI.HouseManagement.UC_HouseManagement();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -89,19 +88,9 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Lưu Bá Minh";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.uC_Home1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(203, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(594, 444);
-            this.panel2.TabIndex = 1;
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLyNhaChoThue.Properties.Resources.icon_user_home;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(42, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(109, 66);
@@ -118,7 +107,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Image = global::QuanLyNhaChoThue.Properties.Resources.sign_out_32px;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(42, 388);
             this.btnLogout.Name = "btnLogout";
@@ -169,7 +158,7 @@
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Image = global::QuanLyNhaChoThue.Properties.Resources.icon_trang_chu_32px;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(0, 113);
             this.btnHome.Name = "btnHome";
@@ -179,22 +168,17 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // imageMenu
+            // panel2
             // 
-            this.imageMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageMenu.ImageStream")));
-            this.imageMenu.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageMenu.Images.SetKeyName(0, "icon_trang_chu_32px.png");
-            this.imageMenu.Images.SetKeyName(1, "icon_trang-chu_checked_32px.png");
-            this.imageMenu.Images.SetKeyName(2, "house_32px.png");
-            this.imageMenu.Images.SetKeyName(3, "house_checked_32px.png");
-            this.imageMenu.Images.SetKeyName(4, "user_settings_32px.png");
-            this.imageMenu.Images.SetKeyName(5, "user_settings_checked_32px.png");
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.uC_Home1);
+            this.panel2.Controls.Add(this.uC_ManageAccount1);
+            this.panel2.Controls.Add(this.uC_HouseManagement1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(203, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(594, 444);
+            this.panel2.TabIndex = 1;
             // 
             // uC_Home1
             // 
@@ -204,6 +188,24 @@
             this.uC_Home1.Name = "uC_Home1";
             this.uC_Home1.Size = new System.Drawing.Size(594, 444);
             this.uC_Home1.TabIndex = 0;
+            // 
+            // uC_ManageAccount1
+            // 
+            this.uC_ManageAccount1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.uC_ManageAccount1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_ManageAccount1.Location = new System.Drawing.Point(0, 0);
+            this.uC_ManageAccount1.Name = "uC_ManageAccount1";
+            this.uC_ManageAccount1.Size = new System.Drawing.Size(594, 444);
+            this.uC_ManageAccount1.TabIndex = 1;
+            // 
+            // uC_HouseManagement1
+            // 
+            this.uC_HouseManagement1.BackColor = System.Drawing.Color.White;
+            this.uC_HouseManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_HouseManagement1.Location = new System.Drawing.Point(0, 0);
+            this.uC_HouseManagement1.Name = "uC_HouseManagement1";
+            this.uC_HouseManagement1.Size = new System.Drawing.Size(594, 444);
+            this.uC_HouseManagement1.TabIndex = 2;
             // 
             // FormMain
             // 
@@ -219,8 +221,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -237,7 +239,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Home.UC_Home uC_Home1;
-        private System.Windows.Forms.ImageList imageMenu;
-        private System.Windows.Forms.ImageList imageList1;
+        private AccountSetting.UC_ManageAccount uC_ManageAccount1;
+        private HouseManagement.UC_HouseManagement uC_HouseManagement1;
     }
 }
