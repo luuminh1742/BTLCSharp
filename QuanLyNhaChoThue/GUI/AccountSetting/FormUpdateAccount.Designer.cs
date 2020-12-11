@@ -41,9 +41,9 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rbtMale = new System.Windows.Forms.RadioButton();
-            this.rbtFemale = new System.Windows.Forms.RadioButton();
             this.rbtOther = new System.Windows.Forms.RadioButton();
+            this.rbtFemale = new System.Windows.Forms.RadioButton();
+            this.rbtMale = new System.Windows.Forms.RadioButton();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -65,9 +65,9 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(739, 55);
+            this.panel1.Size = new System.Drawing.Size(763, 55);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -83,10 +83,10 @@
             this.tableLayoutPanel1.Controls.Add(this.txtUsername, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtPhone, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtAddress, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtAddress, 1, 4);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 86);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(23, 86);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
@@ -94,7 +94,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(739, 285);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(728, 285);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // label2
@@ -144,30 +144,30 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(224, 3);
+            this.txtUsername.Location = new System.Drawing.Point(221, 3);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(415, 30);
+            this.txtUsername.Size = new System.Drawing.Size(458, 30);
             this.txtUsername.TabIndex = 0;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(224, 58);
+            this.txtName.Location = new System.Drawing.Point(221, 58);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(415, 30);
+            this.txtName.Size = new System.Drawing.Size(458, 30);
             this.txtName.TabIndex = 1;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(224, 113);
+            this.txtPhone.Location = new System.Drawing.Point(221, 113);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(415, 30);
+            this.txtPhone.Size = new System.Drawing.Size(458, 30);
             this.txtPhone.TabIndex = 2;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(224, 223);
+            this.txtAddress.Location = new System.Drawing.Point(221, 223);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(415, 30);
+            this.txtAddress.Size = new System.Drawing.Size(458, 30);
             this.txtAddress.TabIndex = 6;
             // 
             // panel2
@@ -176,32 +176,10 @@
             this.panel2.Controls.Add(this.rbtFemale);
             this.panel2.Controls.Add(this.rbtMale);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(224, 168);
+            this.panel2.Location = new System.Drawing.Point(221, 168);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(512, 49);
+            this.panel2.Size = new System.Drawing.Size(504, 49);
             this.panel2.TabIndex = 2;
-            // 
-            // rbtMale
-            // 
-            this.rbtMale.AutoSize = true;
-            this.rbtMale.Location = new System.Drawing.Point(13, 4);
-            this.rbtMale.Name = "rbtMale";
-            this.rbtMale.Size = new System.Drawing.Size(74, 29);
-            this.rbtMale.TabIndex = 3;
-            this.rbtMale.TabStop = true;
-            this.rbtMale.Text = "Nam";
-            this.rbtMale.UseVisualStyleBackColor = true;
-            // 
-            // rbtFemale
-            // 
-            this.rbtFemale.AutoSize = true;
-            this.rbtFemale.Location = new System.Drawing.Point(155, 4);
-            this.rbtFemale.Name = "rbtFemale";
-            this.rbtFemale.Size = new System.Drawing.Size(58, 29);
-            this.rbtFemale.TabIndex = 4;
-            this.rbtFemale.TabStop = true;
-            this.rbtFemale.Text = "Nữ";
-            this.rbtFemale.UseVisualStyleBackColor = true;
             // 
             // rbtOther
             // 
@@ -214,10 +192,32 @@
             this.rbtOther.Text = "Khác";
             this.rbtOther.UseVisualStyleBackColor = true;
             // 
+            // rbtFemale
+            // 
+            this.rbtFemale.AutoSize = true;
+            this.rbtFemale.Location = new System.Drawing.Point(155, 4);
+            this.rbtFemale.Name = "rbtFemale";
+            this.rbtFemale.Size = new System.Drawing.Size(58, 29);
+            this.rbtFemale.TabIndex = 4;
+            this.rbtFemale.TabStop = true;
+            this.rbtFemale.Text = "Nữ";
+            this.rbtFemale.UseVisualStyleBackColor = true;
+            // 
+            // rbtMale
+            // 
+            this.rbtMale.AutoSize = true;
+            this.rbtMale.Location = new System.Drawing.Point(13, 4);
+            this.rbtMale.Name = "rbtMale";
+            this.rbtMale.Size = new System.Drawing.Size(74, 29);
+            this.rbtMale.TabIndex = 3;
+            this.rbtMale.TabStop = true;
+            this.rbtMale.Text = "Nam";
+            this.rbtMale.UseVisualStyleBackColor = true;
+            // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(381, 400);
+            this.btnUpdate.Location = new System.Drawing.Point(236, 400);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(121, 37);
             this.btnUpdate.TabIndex = 7;
@@ -228,7 +228,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(568, 400);
+            this.btnCancel.Location = new System.Drawing.Point(423, 400);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(121, 37);
             this.btnCancel.TabIndex = 8;
@@ -247,6 +247,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormUpdateAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUpdateAccount";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

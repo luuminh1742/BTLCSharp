@@ -53,16 +53,16 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1, 3);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(631, 55);
+            this.panel1.Size = new System.Drawing.Size(644, 45);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 6);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(174, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(255, 29);
             this.label1.TabIndex = 0;
@@ -82,14 +82,14 @@
             this.tableLayoutPanel1.Controls.Add(this.txtPhone, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtAddress, 1, 3);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 78);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(30, 78);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(631, 221);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(579, 221);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel2
@@ -98,9 +98,9 @@
             this.panel2.Controls.Add(this.rbtFemale);
             this.panel2.Controls.Add(this.rbtMale);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(192, 113);
+            this.panel2.Location = new System.Drawing.Point(176, 113);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(436, 49);
+            this.panel2.Size = new System.Drawing.Size(400, 49);
             this.panel2.TabIndex = 0;
             // 
             // rbtOther
@@ -174,29 +174,29 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(192, 3);
+            this.txtName.Location = new System.Drawing.Point(176, 3);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(315, 30);
+            this.txtName.Size = new System.Drawing.Size(382, 30);
             this.txtName.TabIndex = 0;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(192, 58);
+            this.txtPhone.Location = new System.Drawing.Point(176, 58);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(315, 30);
+            this.txtPhone.Size = new System.Drawing.Size(382, 30);
             this.txtPhone.TabIndex = 1;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(192, 168);
+            this.txtAddress.Location = new System.Drawing.Point(176, 168);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(310, 30);
+            this.txtAddress.Size = new System.Drawing.Size(382, 30);
             this.txtAddress.TabIndex = 5;
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(300, 336);
+            this.btnAdd.Location = new System.Drawing.Point(206, 337);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(118, 32);
             this.btnAdd.TabIndex = 6;
@@ -207,7 +207,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(470, 336);
+            this.btnCancel.Location = new System.Drawing.Point(376, 337);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(118, 32);
             this.btnCancel.TabIndex = 8;
@@ -219,13 +219,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 420);
+            this.ClientSize = new System.Drawing.Size(644, 405);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMemberEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMemberEdit";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -19,7 +19,6 @@ C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\bin\Debug\QuanLyNhaChoThue.pdb
 C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.csprojAssemblyReference.cache
 C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.AccountSetting.FormPasswordEdit.resources
 C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.AccountSetting.UC_ManageAccount.resources
-C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.FormMain.resources
 C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.Home.UC_Home.resources
 C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.Room.FormRoomEdit.resources
 C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.Room.Member.FormMemberEdit.resources
@@ -30,3 +29,4 @@ C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.csproj.CoreCompil
 C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.exe
 C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.pdb
 C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.AccountSetting.FormUpdateAccount.resources
+C:\BTLCS\BTLCSharp\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.FormMemberedit.resources

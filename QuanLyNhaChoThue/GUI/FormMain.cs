@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaChoThue.GUI
 {
-    public partial class FormMain : Form
+    public partial class FormMemberedit : Form
     {
-        public FormMain()
+        public FormMemberedit()
         {
             InitializeComponent();
         }
