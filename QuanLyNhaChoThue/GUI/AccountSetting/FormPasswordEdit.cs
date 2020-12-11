@@ -41,5 +41,10 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
                 }
             }
         }
+
+        private void FormPasswordEdit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
