@@ -77,6 +77,7 @@ namespace QuanLyNhaChoThue.GUI
         private void FormMain_Load(object sender, EventArgs e)
         {
             setCheckedMenu(btnHome);
+            
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -95,7 +96,8 @@ namespace QuanLyNhaChoThue.GUI
         {
             setCheckedMenu(btnAccountSetting);
             uC_ManageAccount1.BringToFront();
-           
         }
+
+        
     }
 }

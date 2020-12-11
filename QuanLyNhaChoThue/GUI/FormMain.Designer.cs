@@ -56,6 +56,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -72,9 +73,10 @@
             this.panel1.Controls.Add(this.btnHouseManagement);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 444);
+            this.panel1.Size = new System.Drawing.Size(200, 450);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -109,9 +111,9 @@
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(42, 388);
+            this.btnLogout.Location = new System.Drawing.Point(42, 394);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(114, 33);
+            this.btnLogout.Size = new System.Drawing.Size(120, 33);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -128,9 +130,11 @@
             this.btnAccountSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccountSetting.Location = new System.Drawing.Point(0, 179);
             this.btnAccountSetting.Name = "btnAccountSetting";
-            this.btnAccountSetting.Size = new System.Drawing.Size(194, 34);
+            this.btnAccountSetting.Size = new System.Drawing.Size(200, 34);
             this.btnAccountSetting.TabIndex = 2;
             this.btnAccountSetting.Text = "Quản lý tài khoản";
+            this.btnAccountSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccountSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAccountSetting.UseVisualStyleBackColor = false;
             this.btnAccountSetting.Click += new System.EventHandler(this.btnAccountSetting_Click);
             // 
@@ -145,9 +149,11 @@
             this.btnHouseManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHouseManagement.Location = new System.Drawing.Point(0, 146);
             this.btnHouseManagement.Name = "btnHouseManagement";
-            this.btnHouseManagement.Size = new System.Drawing.Size(194, 34);
+            this.btnHouseManagement.Size = new System.Drawing.Size(200, 34);
             this.btnHouseManagement.TabIndex = 1;
             this.btnHouseManagement.Text = "Quản lý nhà";
+            this.btnHouseManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHouseManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHouseManagement.UseVisualStyleBackColor = false;
             this.btnHouseManagement.Click += new System.EventHandler(this.btnHouseManagement_Click);
             // 
@@ -162,9 +168,11 @@
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(0, 113);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(194, 34);
+            this.btnHome.Size = new System.Drawing.Size(200, 34);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Trang chủ";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
@@ -175,9 +183,10 @@
             this.panel2.Controls.Add(this.uC_ManageAccount1);
             this.panel2.Controls.Add(this.uC_HouseManagement1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(203, 3);
+            this.panel2.Location = new System.Drawing.Point(201, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(594, 444);
+            this.panel2.Size = new System.Drawing.Size(599, 450);
             this.panel2.TabIndex = 1;
             // 
             // uC_Home1
@@ -186,7 +195,7 @@
             this.uC_Home1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Home1.Location = new System.Drawing.Point(0, 0);
             this.uC_Home1.Name = "uC_Home1";
-            this.uC_Home1.Size = new System.Drawing.Size(594, 444);
+            this.uC_Home1.Size = new System.Drawing.Size(599, 450);
             this.uC_Home1.TabIndex = 0;
             // 
             // uC_ManageAccount1
@@ -195,8 +204,8 @@
             this.uC_ManageAccount1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_ManageAccount1.Location = new System.Drawing.Point(0, 0);
             this.uC_ManageAccount1.Name = "uC_ManageAccount1";
-            this.uC_ManageAccount1.Size = new System.Drawing.Size(594, 444);
-            this.uC_ManageAccount1.TabIndex = 1;
+            this.uC_ManageAccount1.Size = new System.Drawing.Size(599, 450);
+            this.uC_ManageAccount1.TabIndex = 2;
             // 
             // uC_HouseManagement1
             // 
@@ -204,14 +213,14 @@
             this.uC_HouseManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_HouseManagement1.Location = new System.Drawing.Point(0, 0);
             this.uC_HouseManagement1.Name = "uC_HouseManagement1";
-            this.uC_HouseManagement1.Size = new System.Drawing.Size(594, 444);
-            this.uC_HouseManagement1.TabIndex = 2;
+            this.uC_HouseManagement1.Size = new System.Drawing.Size(599, 450);
+            this.uC_HouseManagement1.TabIndex = 1;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormMain";

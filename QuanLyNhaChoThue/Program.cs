@@ -1,4 +1,5 @@
 ﻿using QuanLyNhaChoThue.GUI;
+using QuanLyNhaChoThue.GUI.HouseManagement.Room;
 using System;
 using System.Windows.Forms;
 
