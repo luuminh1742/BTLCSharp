@@ -22,5 +22,11 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
             var formPasswordEdit = new FormPasswordEdit();
             formPasswordEdit.ShowDialog();
         }
+
+        private void btnUpdateInfor_Click(object sender, EventArgs e)
+        {
+            var formUpdateAccount = new FormUpdateAccount();
+            formUpdateAccount.ShowDialog();
+        }
     }
 }

@@ -73,6 +73,16 @@ namespace QuanLyNhaChoThue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_house_50px {
+            get {
+                object obj = ResourceManager.GetObject("add_house_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap house_32px {
             get {
                 object obj = ResourceManager.GetObject("house_32px", resourceCulture);

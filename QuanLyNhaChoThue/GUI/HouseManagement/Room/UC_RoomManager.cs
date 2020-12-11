@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
 {
-    public partial class FormCreateBill : Form
+    public partial class UC_RoomManager : UserControl
     {
-        public FormCreateBill()
+        public UC_RoomManager()
         {
             InitializeComponent();
         }

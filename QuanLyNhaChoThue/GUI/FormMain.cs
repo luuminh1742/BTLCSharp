@@ -10,8 +10,6 @@ namespace QuanLyNhaChoThue.GUI
         {
             InitializeComponent();
         }
-
-
         private void setCheckedMenu(Button btnChecked)
         {
             string pathImgHome = @"C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\Image\icon_trang_chu_32px.png";
@@ -77,7 +75,6 @@ namespace QuanLyNhaChoThue.GUI
         private void FormMain_Load(object sender, EventArgs e)
         {
             setCheckedMenu(btnHome);
-            
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -98,6 +95,11 @@ namespace QuanLyNhaChoThue.GUI
             uC_ManageAccount1.BringToFront();
         }
 
-        
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            var formLogin = new FormLogin();
+            formLogin.Show();
+        }
     }
 }

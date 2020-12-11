@@ -1,6 +1,6 @@
-﻿namespace QuanLyNhaChoThue.GUI.HouseManagement
+﻿namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
 {
-    partial class UC_HouseManagement
+    partial class UC_RoomManager
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.pctAddHouse = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pctAddHouse)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -39,30 +37,18 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 24);
+            this.label1.Size = new System.Drawing.Size(148, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Quản lý nhà";
+            this.label1.Text = "Quản lý phòng";
             // 
-            // pctAddHouse
-            // 
-            this.pctAddHouse.Image = global::QuanLyNhaChoThue.Properties.Resources.add_house_50px;
-            this.pctAddHouse.Location = new System.Drawing.Point(16, 50);
-            this.pctAddHouse.Name = "pctAddHouse";
-            this.pctAddHouse.Size = new System.Drawing.Size(50, 50);
-            this.pctAddHouse.TabIndex = 2;
-            this.pctAddHouse.TabStop = false;
-            this.pctAddHouse.Click += new System.EventHandler(this.pctAddHouse_Click);
-            // 
-            // UC_HouseManagement
+            // UC_RoomManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pctAddHouse);
             this.Controls.Add(this.label1);
-            this.Name = "UC_HouseManagement";
-            this.Size = new System.Drawing.Size(636, 434);
-            ((System.ComponentModel.ISupportInitialize)(this.pctAddHouse)).EndInit();
+            this.Name = "UC_RoomManager";
+            this.Size = new System.Drawing.Size(623, 505);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -71,6 +57,5 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pctAddHouse;
     }
 }

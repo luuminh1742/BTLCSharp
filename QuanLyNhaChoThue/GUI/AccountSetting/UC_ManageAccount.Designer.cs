@@ -30,13 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnUpdateInfor = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
+            this.btnUpdateInfor = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,56 +67,6 @@
             this.panel1.Size = new System.Drawing.Size(539, 412);
             this.panel1.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLyNhaChoThue.Properties.Resources.icon_user_home;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(143, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Họ tên : Nguyễn Văn A";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(143, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Giới tính";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(143, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Địa chỉ";
-            // 
-            // btnUpdateInfor
-            // 
-            this.btnUpdateInfor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateInfor.Location = new System.Drawing.Point(17, 252);
-            this.btnUpdateInfor.Name = "btnUpdateInfor";
-            this.btnUpdateInfor.Size = new System.Drawing.Size(168, 29);
-            this.btnUpdateInfor.TabIndex = 3;
-            this.btnUpdateInfor.Text = "Cập nhật thông tin";
-            this.btnUpdateInfor.UseVisualStyleBackColor = true;
-            // 
             // btnChangePassword
             // 
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,6 +78,17 @@
             this.btnChangePassword.UseVisualStyleBackColor = true;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
+            // btnUpdateInfor
+            // 
+            this.btnUpdateInfor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateInfor.Location = new System.Drawing.Point(17, 252);
+            this.btnUpdateInfor.Name = "btnUpdateInfor";
+            this.btnUpdateInfor.Size = new System.Drawing.Size(168, 29);
+            this.btnUpdateInfor.TabIndex = 3;
+            this.btnUpdateInfor.Text = "Cập nhật thông tin";
+            this.btnUpdateInfor.UseVisualStyleBackColor = true;
+            this.btnUpdateInfor.Click += new System.EventHandler(this.btnUpdateInfor_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -137,6 +98,46 @@
             this.label5.Size = new System.Drawing.Size(89, 20);
             this.label5.TabIndex = 2;
             this.label5.Text = " .... ..... . .. . .";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(143, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Địa chỉ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(143, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Giới tính";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(143, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(171, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Họ tên : Nguyễn Văn A";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyNhaChoThue.Properties.Resources.icon_user_home;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(94, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // UC_ManageAccount
             // 

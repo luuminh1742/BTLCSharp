@@ -16,5 +16,11 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
         {
             InitializeComponent();
         }
+
+        private void pctAddHouse_Click(object sender, EventArgs e)
+        {
+            var formEditHouse = new FormHouseEdit();
+            formEditHouse.ShowDialog();
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.uC_Home1 = new QuanLyNhaChoThue.GUI.Home.UC_Home();
             this.uC_ManageAccount1 = new QuanLyNhaChoThue.GUI.AccountSetting.UC_ManageAccount();
             this.uC_HouseManagement1 = new QuanLyNhaChoThue.GUI.HouseManagement.UC_HouseManagement();
+            this.uC_RoomManager1 = new QuanLyNhaChoThue.GUI.HouseManagement.Room.UC_RoomManager();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -118,6 +119,7 @@
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnAccountSetting
             // 
@@ -182,6 +184,7 @@
             this.panel2.Controls.Add(this.uC_Home1);
             this.panel2.Controls.Add(this.uC_ManageAccount1);
             this.panel2.Controls.Add(this.uC_HouseManagement1);
+            this.panel2.Controls.Add(this.uC_RoomManager1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(201, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
@@ -215,6 +218,15 @@
             this.uC_HouseManagement1.Name = "uC_HouseManagement1";
             this.uC_HouseManagement1.Size = new System.Drawing.Size(599, 450);
             this.uC_HouseManagement1.TabIndex = 1;
+            // 
+            // uC_RoomManager1
+            // 
+            this.uC_RoomManager1.BackColor = System.Drawing.Color.White;
+            this.uC_RoomManager1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_RoomManager1.Location = new System.Drawing.Point(0, 0);
+            this.uC_RoomManager1.Name = "uC_RoomManager1";
+            this.uC_RoomManager1.Size = new System.Drawing.Size(599, 450);
+            this.uC_RoomManager1.TabIndex = 3;
             // 
             // FormMain
             // 
@@ -250,5 +262,6 @@
         private Home.UC_Home uC_Home1;
         private AccountSetting.UC_ManageAccount uC_ManageAccount1;
         private HouseManagement.UC_HouseManagement uC_HouseManagement1;
+        private HouseManagement.Room.UC_RoomManager uC_RoomManager1;
     }
 }
