@@ -71,6 +71,18 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             dgvBill.Columns[14].HeaderCell.Value = "Ngày tạo";
             dgvBill.Columns[15].HeaderCell.Value = "Ngày cập nhật";
             dgvBill.Columns[16].HeaderCell.Value = "Trạng thái";
+            /*for (int i = 0; i < dgvBill.Rows.Count-1; i++)
+            {
+                if (dgvBill.Rows[i].Cells[16].Value.Equals(true))
+                {
+                    dgvBill.Rows[i].Cells[16].Value = "Đã đóng tiền nhà";
+                }
+                else
+                {
+                    dgvBill.Rows[i].Cells[16].Value = "Chưa đóng tiền nhà";
+                }
+
+            }*/
 
 
         }
@@ -89,6 +101,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             dgvMember.Columns[5].HeaderCell.Value = "Địa chỉ";
             dgvMember.Columns[6].HeaderCell.Value = "Số điện thoại";
             dgvMember.Columns[7].HeaderCell.Value = "Ngày bắt đầu thuê";
+            
         }
         private void LoadMoneyTypes()
         {

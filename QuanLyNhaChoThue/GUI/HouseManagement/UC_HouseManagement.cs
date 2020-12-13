@@ -49,7 +49,9 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
             houseId = listHouse[indexHouseSelected].Id;
             Thread thread = new Thread(new ThreadStart(ShowFormRoom)); //Tạo luồng mới
             thread.Start(); //Khởi chạy luồng
+            //UC_HouseManagement_Load(sender,e);
             FormMain.formMain.Close();
+
         }
 
         private void lvHouse_SelectedIndexChanged(object sender, EventArgs e)

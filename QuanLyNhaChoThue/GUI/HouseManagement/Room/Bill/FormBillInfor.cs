@@ -15,6 +15,8 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill
     public partial class FormBillInfor : Form
     {
         private int billId;
+        BillDTO billDTO = new BillDTO();
+        RoomBLL roomBLL = new RoomBLL();
         BillBLL billBll = new BillBLL();
         public FormBillInfor()
         {
@@ -34,7 +36,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill
         }
         private void LoadRoomMoney()
         {
-            BillDTO billDTO = billBll.FindById(billId);
+            billDTO = billBll.FindById(billId);
             string[] row1 = { "Tiền phòng", billDTO.RoomMoney + " (VNĐ)" };
             string[] row2 = { "Tiền điện", billDTO.ElectricMoney + " (VNĐ)" };
             string[] row3 = { "Tiền nước", billDTO.WaterMoney +" (VNĐ)" };
@@ -55,16 +57,52 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill
             lvRoomMoney.Items.Add(new ListViewItem(row8));
             lvRoomMoney.Items.Add(new ListViewItem(row9));
             lvRoomMoney.Items.Add(new ListViewItem(row10));
+            chkStatus.Checked = billDTO.Status;
             if (billDTO.Status)
             {
-                lbStatus.Text = "Đã đóng tiền nhà";
+                chkStatus.Text = "Đã đóng tiền nhà";
+                chkStatus.Visible = true;
             }
             else
             {
-                lbStatus.Text = "Chưa đóng tiền nhà";
+                chkStatus.Text = "Chưa đóng tiền nhà";
             }
+            lbCreateDate.Text = billDTO.CreatedDate.ToString();
+            lbCreateBy.Text = billDTO.ModifiedBy;
+            RoomDTO roomDTO = roomBLL.findOne(billDTO.RoomId);
+            lbRoomName.Text = roomDTO.RoomName;
+        }
 
+        private void chkStatus_CheckedChanged(object sender, EventArgs e)
+        {
+            
 
+            
+            
+            //chkStatus.Checked = false;
+            
+        }
+
+        private void chkStatus_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Xác nhận phòng đã đóng tiền!", "Thông báo",
+                 MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                if (billBll.UpdateStatus(billDTO.Id))
+                {
+                    MessageBox.Show("Cập nhật thành công!", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    chkStatus.Checked = true;
+                    chkStatus.Text = "Đã đóng tiền nhà";
+                    chkStatus.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật thất bại!", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

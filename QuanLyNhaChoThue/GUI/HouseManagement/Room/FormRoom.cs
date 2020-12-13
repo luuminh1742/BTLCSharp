@@ -8,6 +8,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
 {
     public partial class FormRoom : Form
     {
+        //public static int houseId = 0;
         public static int houseId = UC_HouseManagement.houseId;
         private int temp = 0;
         public FormRoom()

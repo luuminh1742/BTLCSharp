@@ -71,10 +71,12 @@
             // 
             // pctAddHouse
             // 
+            this.pctAddHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pctAddHouse.Image = global::QuanLyNhaChoThue.Properties.Resources.add_house_50px;
-            this.pctAddHouse.Location = new System.Drawing.Point(158, 11);
+            this.pctAddHouse.Location = new System.Drawing.Point(565, 11);
             this.pctAddHouse.Name = "pctAddHouse";
-            this.pctAddHouse.Size = new System.Drawing.Size(50, 50);
+            this.pctAddHouse.Size = new System.Drawing.Size(50, 35);
+            this.pctAddHouse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctAddHouse.TabIndex = 2;
             this.pctAddHouse.TabStop = false;
             this.pctAddHouse.Click += new System.EventHandler(this.pctAddHouse_Click);

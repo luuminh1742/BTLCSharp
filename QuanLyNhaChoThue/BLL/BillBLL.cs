@@ -124,6 +124,11 @@ namespace QuanLyNhaChoThue.BLL
 
             return dto;
         }
+        public bool UpdateStatus(int id)
+        {
+            string sql = "update Bill set ModifiedDate = @0, Status = @1 where Id = @2";
+            return dal.ExecuteQuery(sql,DateTime.Now,1,id);
+        }
 
     }
 }
