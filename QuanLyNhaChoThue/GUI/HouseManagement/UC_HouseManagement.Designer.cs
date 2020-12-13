@@ -55,7 +55,7 @@
             this.lvHouse.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lvHouse.HideSelection = false;
             this.lvHouse.LargeImageList = this.imageListHouse;
-            this.lvHouse.Location = new System.Drawing.Point(16, 67);
+            this.lvHouse.Location = new System.Drawing.Point(17, 55);
             this.lvHouse.Name = "lvHouse";
             this.lvHouse.Size = new System.Drawing.Size(599, 350);
             this.lvHouse.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             this.pctAddHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pctAddHouse.Image = global::QuanLyNhaChoThue.Properties.Resources.add_house_50px;
-            this.pctAddHouse.Location = new System.Drawing.Point(565, 11);
+            this.pctAddHouse.Location = new System.Drawing.Point(566, 11);
             this.pctAddHouse.Name = "pctAddHouse";
             this.pctAddHouse.Size = new System.Drawing.Size(50, 35);
             this.pctAddHouse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

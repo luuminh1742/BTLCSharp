@@ -130,5 +130,24 @@ namespace QuanLyNhaChoThue.BLL
             return dal.ExecuteQuery(sql,DateTime.Now,1,id);
         }
 
+        public List<ViewStatisticDTO> StatisticBill(string username)
+        {
+            string sql = "select * from View_Statistic where UserName = '"+username+ "' order by Date ,Status";
+            List<ViewStatisticDTO> result = new List<ViewStatisticDTO>();
+            DataTable dt = dal.Query(sql);
+            for(int i = 0; i < dt.Rows.Count; i++)
+            {
+                ViewStatisticDTO viewStatisticDTO = new ViewStatisticDTO();
+                viewStatisticDTO.Status = bool.Parse(dt.Rows[i].ItemArray[1].ToString());
+                viewStatisticDTO.Date = dt.Rows[i].ItemArray[2].ToString();
+                viewStatisticDTO.Count = int.Parse(dt.Rows[i].ItemArray[3].ToString());
+                result.Add(viewStatisticDTO);
+            }
+
+            return result;
+        }
+
+
+
     }
 }

@@ -39,7 +39,8 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
         public static int houseId = 0;
         private void ShowFormRoom()
         {
-            var formRoom = new FormRoom();
+            var formRoom = new FormRoom(houseId);
+            formRoom.houseId = houseId;
             formRoom.ShowDialog();
         }
         private void lvHouse_DoubleClick(object sender, EventArgs e)

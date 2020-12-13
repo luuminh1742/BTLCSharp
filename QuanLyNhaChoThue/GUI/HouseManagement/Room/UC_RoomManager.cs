@@ -8,7 +8,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
     {
         /*HouseBLL houseBll = new HouseBLL();
         RoomBLL roomBll = new RoomBLL();*/
-        private int houseId = FormRoom.houseId;
+        public int houseId;
         public UC_RoomManager()
         {
             InitializeComponent();
@@ -16,7 +16,6 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
 
         private void UC_RoomManager_Load(object sender, EventArgs e)
         {
-
             LoadHouse();
             LoadListRoom();
         }

@@ -1,5 +1,6 @@
 ﻿using QuanLyNhaChoThue.Utils;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -118,6 +119,8 @@ namespace QuanLyNhaChoThue.GUI
         {
             SidePanel.Height = btnHelp.Height;
             SidePanel.Top = btnHelp.Top;
+            ProcessStartInfo sInfo = new ProcessStartInfo("http://google.com/");
+            Process.Start(sInfo);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using QuanLyNhaChoThue.Utils;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
@@ -8,9 +9,8 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
 {
     public partial class FormRoom : Form
     {
-        //public static int houseId = 0;
-        public static int houseId = UC_HouseManagement.houseId;
-        private int temp = 0;
+        public int houseId = 0;
+        //public static int houseId = UC_HouseManagement.houseId;
         public FormRoom()
         {
             InitializeComponent();
@@ -18,7 +18,8 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
         public FormRoom(int houseId)
         {
             InitializeComponent();
-            this.temp = houseId;
+            this.houseId = houseId;
+            uC_RoomManager1.houseId = houseId;
         }
 
         private void FormRoom_Load(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             SidePanel.Height = btnHouseManagement.Height;
             SidePanel.Top = btnHouseManagement.Top;
             uC_RoomManager1.BringToFront();
-            //houseId = temp;
+            
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -65,6 +66,8 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
         {
             SidePanel.Height = btnHelp.Height;
             SidePanel.Top = btnHelp.Top;
+            ProcessStartInfo sInfo = new ProcessStartInfo("http://google.com/");
+            Process.Start(sInfo);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +59,7 @@
     <Compile Include="DTO\MemberDTO.cs" />
     <Compile Include="DTO\RoomDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="DTO\ViewStatisticDTO.cs" />
     <Compile Include="GUI\AccountSetting\FormPasswordEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +160,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ConvertDataTableToList.cs" />
     <Compile Include="Utils\MovePanel.cs" />
+    <Compile Include="Utils\StatisticUtil.cs" />
     <EmbeddedResource Include="GUI\AccountSetting\FormPasswordEdit.resx">
       <DependentUpon>FormPasswordEdit.cs</DependentUpon>
     </EmbeddedResource>
