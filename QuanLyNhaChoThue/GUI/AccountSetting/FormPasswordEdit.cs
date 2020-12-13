@@ -1,4 +1,6 @@
-﻿using QuanLyNhaChoThue.DTO;
+﻿using QuanLyNhaChoThue.BLL;
+using QuanLyNhaChoThue.DTO;
+using QuanLyNhaChoThue.Utils;
 using System;
 using System.Windows.Forms;
 
@@ -6,9 +8,16 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
 {
     public partial class FormPasswordEdit : Form
     {
+        private int id = 0;
+        UserBLL userBll = new UserBLL();
         public FormPasswordEdit()
         {
             InitializeComponent();
+        }
+        public FormPasswordEdit(int id)
+        {
+            InitializeComponent();
+            this.id = id;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -30,9 +39,18 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
                 string confirmPass = txtConfirmPass.Text;
                 if (pass.Equals(confirmPass))
                 {
-                    UserDTO userDTO = new UserDTO();
-                    userDTO.Password = pass;
-                    MessageBox.Show("Pass :" + userDTO.Password);
+                    if (userBll.UpdatePassword(id, pass))
+                    {
+                        MessageBox.Show("Cập nhật mật khẩu thành công! ", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật mật khẩu thất bại! ", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    this.Close();
                 }
                 else
                 {
@@ -46,6 +64,11 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
         {
             txtPass.PasswordChar = '*';
             txtConfirmPass.PasswordChar = '*';
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
         }
     }
 }

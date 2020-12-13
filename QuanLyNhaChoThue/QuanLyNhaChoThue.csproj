@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BLL\BillBLL.cs" />
     <Compile Include="BLL\HomeBLL.cs" />
+    <Compile Include="BLL\HouseBLL.cs" />
     <Compile Include="BLL\RoomBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="DAL\Dal.cs" />
@@ -99,23 +100,35 @@
     <Compile Include="GUI\HouseManagement\FormHouseEdit.Designer.cs">
       <DependentUpon>FormHouseEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HouseManagement\Room\Bill\FormBillInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\Room\Bill\FormBillInfor.Designer.cs">
+      <DependentUpon>FormBillInfor.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HouseManagement\Room\Bill\FormCreateBill.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\HouseManagement\Room\Bill\FormCreateBill.Designer.cs">
       <DependentUpon>FormCreateBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\HouseManagement\Room\Bill\UC_BillInfor.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="GUI\HouseManagement\Room\FormRoom.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\HouseManagement\Room\Bill\UC_BillInfor.Designer.cs">
-      <DependentUpon>UC_BillInfor.cs</DependentUpon>
+    <Compile Include="GUI\HouseManagement\Room\FormRoom.Designer.cs">
+      <DependentUpon>FormRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\HouseManagement\Room\FormRoomEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\HouseManagement\Room\FormRoomEdit.Designer.cs">
       <DependentUpon>FormRoomEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\Room\FormRoomInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HouseManagement\Room\FormRoomInfor.Designer.cs">
+      <DependentUpon>FormRoomInfor.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\HouseManagement\Room\Member\FormMemberEdit.cs">
       <SubType>Form</SubType>
@@ -143,6 +156,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ConvertDataTableToList.cs" />
+    <Compile Include="Utils\MovePanel.cs" />
     <EmbeddedResource Include="GUI\AccountSetting\FormPasswordEdit.resx">
       <DependentUpon>FormPasswordEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,14 +179,20 @@
     <EmbeddedResource Include="GUI\HouseManagement\FormHouseEdit.resx">
       <DependentUpon>FormHouseEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HouseManagement\Room\Bill\FormBillInfor.resx">
+      <DependentUpon>FormBillInfor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HouseManagement\Room\Bill\FormCreateBill.resx">
       <DependentUpon>FormCreateBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HouseManagement\Room\Bill\UC_BillInfor.resx">
-      <DependentUpon>UC_BillInfor.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\HouseManagement\Room\FormRoom.resx">
+      <DependentUpon>FormRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HouseManagement\Room\FormRoomEdit.resx">
       <DependentUpon>FormRoomEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HouseManagement\Room\FormRoomInfor.resx">
+      <DependentUpon>FormRoomInfor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HouseManagement\Room\Member\FormMemberEdit.resx">
       <DependentUpon>FormMemberEdit.cs</DependentUpon>
@@ -211,11 +232,25 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="database\create_table.txt" />
+    <None Include="Image\money_25px.png" />
+    <None Include="Image\subtract_15px.png" />
+    <None Include="Image\maximize_button_15px.png" />
+    <None Include="Image\subtract_25px.png" />
+    <None Include="Image\maximize_button_25px.png" />
+    <None Include="Image\user_settings_25px.png" />
+    <None Include="Image\windows_client_25px.png" />
     <None Include="Image\user_settings_checked_32px.png" />
     <None Include="Image\user_settings_32px.png" />
     <None Include="Image\house_32px.png" />
     <None Include="Image\house_checked_32px.png" />
     <None Include="Image\add_house_50px.png" />
+    <None Include="Image\business_building_25px.png" />
+    <None Include="Image\delete_25px.png" />
+    <None Include="Image\delete_15px.png" />
+    <None Include="Image\help_25px.png" />
+    <None Include="Image\add_25px.png" />
+    <None Include="Image\edit_property_25px.png" />
+    <None Include="Image\add_user_25px.png" />
     <Content Include="Image\icons8_home_50.png" />
     <None Include="Image\icon_trang_chu_32px.png" />
     <None Include="Image\icon_trang-chu_checked_32px.png" />

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtLastWater = new System.Windows.Forms.TextBox();
+            this.txtLastElectric = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtLastElectric = new System.Windows.Forms.TextBox();
-            this.txtLastWater = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -65,6 +65,24 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(478, 79);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
+            // txtLastWater
+            // 
+            this.txtLastWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastWater.Location = new System.Drawing.Point(177, 37);
+            this.txtLastWater.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLastWater.Name = "txtLastWater";
+            this.txtLastWater.Size = new System.Drawing.Size(275, 26);
+            this.txtLastWater.TabIndex = 2;
+            // 
+            // txtLastElectric
+            // 
+            this.txtLastElectric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastElectric.Location = new System.Drawing.Point(177, 2);
+            this.txtLastElectric.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLastElectric.Name = "txtLastElectric";
+            this.txtLastElectric.Size = new System.Drawing.Size(275, 26);
+            this.txtLastElectric.TabIndex = 1;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label2);
@@ -85,24 +103,6 @@
             this.label2.Size = new System.Drawing.Size(146, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Số nước cuối tháng";
-            // 
-            // txtLastElectric
-            // 
-            this.txtLastElectric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastElectric.Location = new System.Drawing.Point(177, 2);
-            this.txtLastElectric.Margin = new System.Windows.Forms.Padding(2);
-            this.txtLastElectric.Name = "txtLastElectric";
-            this.txtLastElectric.Size = new System.Drawing.Size(275, 26);
-            this.txtLastElectric.TabIndex = 1;
-            // 
-            // txtLastWater
-            // 
-            this.txtLastWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastWater.Location = new System.Drawing.Point(177, 37);
-            this.txtLastWater.Margin = new System.Windows.Forms.Padding(2);
-            this.txtLastWater.Name = "txtLastWater";
-            this.txtLastWater.Size = new System.Drawing.Size(275, 26);
-            this.txtLastWater.TabIndex = 2;
             // 
             // panel5
             // 
@@ -127,18 +127,20 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 45);
             this.panel1.TabIndex = 7;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(181, 9);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -148,14 +150,18 @@
             // 
             // btnExit
             // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(316, 179);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(331, 179);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(45, 30);
+            this.btnExit.Size = new System.Drawing.Size(85, 35);
             this.btnExit.TabIndex = 12;
             this.btnExit.Text = "Hủy";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label3
@@ -181,21 +187,26 @@
             // 
             // btnCreateBill
             // 
+            this.btnCreateBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCreateBill.FlatAppearance.BorderSize = 0;
+            this.btnCreateBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateBill.ForeColor = System.Drawing.Color.White;
             this.btnCreateBill.Location = new System.Drawing.Point(182, 179);
             this.btnCreateBill.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateBill.Name = "btnCreateBill";
-            this.btnCreateBill.Size = new System.Drawing.Size(116, 30);
+            this.btnCreateBill.Size = new System.Drawing.Size(129, 35);
             this.btnCreateBill.TabIndex = 9;
             this.btnCreateBill.Text = "Tạo hóa đơn";
-            this.btnCreateBill.UseVisualStyleBackColor = true;
+            this.btnCreateBill.UseVisualStyleBackColor = false;
             this.btnCreateBill.Click += new System.EventHandler(this.btnCreateBill_Click);
             // 
             // FormCreateBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 220);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(500, 227);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);

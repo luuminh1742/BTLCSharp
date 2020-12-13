@@ -1,4 +1,6 @@
-﻿using QuanLyNhaChoThue.DTO;
+﻿using QuanLyNhaChoThue.BLL;
+using QuanLyNhaChoThue.DTO;
+using QuanLyNhaChoThue.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +15,16 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
 {
     public partial class FormCreateBill : Form
     {
+        BillBLL billBll = new BillBLL();
+        private int roomId;
         public FormCreateBill()
         {
             InitializeComponent();
+        }
+        public FormCreateBill(int roomId)
+        {
+            InitializeComponent();
+            this.roomId = roomId;
         }
 
         private void FormCreateBill_Load(object sender, EventArgs e)
@@ -37,12 +46,29 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
                 BillDTO billDTO = new BillDTO();
                 billDTO.LastElectricNumber = lastElectric;
                 billDTO.LastWaterNumber = lastWater;
-                MessageBox.Show("Số điện: " + billDTO.LastElectricNumber + "\n" + "Số nước: " + billDTO.LastWaterNumber);
+                billDTO.RoomId = roomId;
+                if (billBll.Insert(billDTO))
+                {
+                    MessageBox.Show("Tạo hóa đơn thành công", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Tạo hóa đơn thất bại", "Thông báo",
+                   MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Phải nhập số", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Phải nhập số", "Lỗi", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
         }
     }
 }

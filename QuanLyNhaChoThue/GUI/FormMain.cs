@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhaChoThue.Utils;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,92 +7,48 @@ namespace QuanLyNhaChoThue.GUI
 {
     public partial class FormMain : Form
     {
+        public static Form formMain;
+        private string at = "";
         public FormMain()
         {
             InitializeComponent();
+            formMain = this;
         }
-        private void setCheckedMenu(Button btnChecked)
+        public FormMain(string at)
         {
-            string pathImgHome = @"C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\Image\icon_trang_chu_32px.png";
-            string pathImgHomeChecked = @"C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\Image\icon_trang-chu_checked_32px.png";
-            string pathImgHouseManagement = @"C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\Image\house_32px.png";
-            string pathImgHouseManagementChecked = @"C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\Image\house_checked_32px.png";
-            string pathImgAccountSetting = @"C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\Image\user_settings_32px.png";
-            string pathImgAccountSettingChecked = @"C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\Image\user_settings_checked_32px.png";
-            
-           
-            if (btnChecked == btnHome)
-            {
-                btnHome.BackColor = Color.AliceBlue;
-                btnHome.ForeColor = Color.Blue;
-                btnHome.Image = Image.FromFile(pathImgHomeChecked);
-                
-                /**/
-                btnHouseManagement.BackColor = Color.White;
-                btnHouseManagement.ForeColor = Color.Black;
-                btnHouseManagement.Image = Image.FromFile(pathImgHouseManagement);
-                
-                /**/
-                btnAccountSetting.BackColor = Color.White;
-                btnAccountSetting.ForeColor = Color.Black;
-                btnAccountSetting.Image = Image.FromFile(pathImgAccountSetting);
-                
-                return;
-            }
-            if (btnChecked == btnHouseManagement)
-            {
-                btnHome.BackColor = Color.White;
-                btnHome.ForeColor = Color.Black;
-                btnHome.Image = Image.FromFile(pathImgHome);
-                /**/
-                btnHouseManagement.BackColor = Color.AliceBlue;
-                btnHouseManagement.ForeColor = Color.Blue;
-                btnHouseManagement.Image = Image.FromFile(pathImgHouseManagementChecked);
-                /**/
-                btnAccountSetting.BackColor = Color.White;
-                btnAccountSetting.ForeColor = Color.Black;
-                btnAccountSetting.Image = Image.FromFile(pathImgAccountSetting);
-                return;
-            }
-            if (btnChecked == btnAccountSetting)
-            {
-                btnHome.BackColor = Color.White;
-                btnHome.ForeColor = Color.Black;
-                btnHome.Image = Image.FromFile(pathImgHome);
-                /**/
-                btnHouseManagement.BackColor = Color.White;
-                btnHouseManagement.ForeColor = Color.Black;
-                btnHouseManagement.Image = Image.FromFile(pathImgHouseManagement);
-                /**/
-                btnAccountSetting.BackColor = Color.AliceBlue;
-                btnAccountSetting.ForeColor = Color.Blue;
-                btnAccountSetting.Image = Image.FromFile(pathImgAccountSettingChecked);
-                return;
-            }
+            InitializeComponent();
+            formMain = this;
+            this.at = at;
         }
-
-
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            setCheckedMenu(btnHome);
+            if (at.Equals("ListHouse"))
+            {
+                SidePanel.Height = btnHouseManagement.Height;
+                SidePanel.Top = btnHouseManagement.Top;
+                uC_HouseManagement1.BringToFront();
+            }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            setCheckedMenu(btnHome);
+            SidePanel.Height = btnHome.Height;
+            SidePanel.Top = btnHome.Top;
             uC_Home1.BringToFront();
         }
 
         private void btnHouseManagement_Click(object sender, EventArgs e)
         {
-            setCheckedMenu(btnHouseManagement);
+            SidePanel.Height = btnHouseManagement.Height;
+            SidePanel.Top = btnHouseManagement.Top;
             uC_HouseManagement1.BringToFront();
         }
 
         private void btnAccountSetting_Click(object sender, EventArgs e)
         {
-            setCheckedMenu(btnAccountSetting);
+            SidePanel.Height = btnAccountSetting.Height;
+            SidePanel.Top = btnAccountSetting.Top;
             uC_ManageAccount1.BringToFront();
         }
 
@@ -100,6 +57,67 @@ namespace QuanLyNhaChoThue.GUI
             this.Close();
             var formLogin = new FormLogin();
             formLogin.Show();
+        }
+
+        
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            //FormLogin.formLogin.Close();
+        }
+
+        private void btnClose_MouseHover(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Red;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.White;
+        }
+
+        private void btnMaxSize_MouseHover(object sender, EventArgs e)
+        {
+            btnMaxSize.BackColor = Color.LightGray;
+        }
+
+        private void btnMaxSize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMaxSize.BackColor = Color.White;
+        }
+
+        private void btnMinSize_MouseHover(object sender, EventArgs e)
+        {
+            btnMinSize.BackColor = Color.LightGray;
+        }
+
+        private void btnMinSize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinSize.BackColor = Color.White;
+        }
+
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
+        }
+
+        private void btnMaxSize_Click(object sender, EventArgs e)
+        {
+            if(this.MaximizeBox)
+            {
+                this.MinimumSize = new Size(1200, 980); ;
+            }
+            else
+            {
+                this.MinimumSize = new Size(1004, 511); 
+            }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnHelp.Height;
+            SidePanel.Top = btnHelp.Top;
         }
     }
 }

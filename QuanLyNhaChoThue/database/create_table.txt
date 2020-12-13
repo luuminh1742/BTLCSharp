@@ -13,90 +13,90 @@ create database QuanLyNhaThue
 go
 use QuanLyNhaThue
 go
-Create table [User] (
-	[Id] Integer Identity,
-	[UserName] Varchar(200) NULL,
-	[Password] Varchar(255) NULL,
-	[FullName] Nvarchar(100) NULL,
-	[Gender] Char(10) NULL,
-	[Address] Nvarchar(255) NULL,
-	[Phone] Char(12) NULL,
-	[CreatedDate] Datetime NULL,
-	[ModifiedDate] Datetime NULL,
-	[Status] Bit NULL,
-Primary Key  ([Id])
+Create table Users (
+	Id Integer Identity,
+	UserName Varchar(200) NULL,
+	Password Varchar(255) NULL,
+	FullName Nvarchar(100) NULL,
+	Gender Char(10) NULL,
+	Address Nvarchar(255) NULL,
+	Phone Char(12) NULL,
+	CreatedDate Datetime NULL,
+	ModifiedDate Datetime NULL,
+	Status Bit NULL,
+Primary Key  (Id)
 ) 
 go
 
-Create table [House] (
-	[Id] Integer Identity,
-	[Name] Nvarchar(200) NULL,
-	[Address] Nvarchar(255) NULL,
-	[Description] Text NULL,
-	[UserId] Integer NOT NULL,
-Primary Key  ([Id])
+Create table House (
+	Id Integer Identity,
+	Name Nvarchar(200) NULL,
+	Address Nvarchar(255) NULL,
+	Description Text NULL,
+	UserId Integer NOT NULL,
+Primary Key  (Id)
 ) 
 go
 
-Create table [Room] (
-	[Id] Integer Identity,
-	[HouseId] Integer NOT NULL,
-	[RoomName] Nvarchar(50) NOT NULL,
-	[RoomMoney] Integer NOT NULL,
-	[ElectricMoney] Integer NULL,
-	[WaterMoney] Integer NULL,
-	[NetworkMoney] Integer NULL,
-	[OtherMoney] Integer NULL,
-	[NetworkMoneyType] Nvarchar(50) NULL,
-	[WaterMoneyType] Nvarchar(50) NULL,
-	[LastElectricNumber] Integer NULL,
-	[LastWaterNumber] Integer NULL,
-	[Member] Integer NULL,
-	[Description] Text NULL,
-	[Status] Bit NULL,
-Primary Key  ([Id])
+Create table Room (
+	Id Integer Identity,
+	HouseId Integer NOT NULL,
+	RoomName Nvarchar(50) NOT NULL,
+	RoomMoney Integer NOT NULL,
+	ElectricMoney Integer NULL,
+	WaterMoney Integer NULL,
+	NetworkMoney Integer NULL,
+	OtherMoney Integer NULL,
+	NetworkMoneyType Nvarchar(50) NULL,
+	WaterMoneyType Nvarchar(50) NULL,
+	LastElectricNumber Integer NULL,
+	LastWaterNumber Integer NULL,
+	Member Integer NULL,
+	Description Text NULL,
+	Status Bit NULL,
+Primary Key  (Id)
 ) 
 go
 
-Create table [Member] (
-	[UserId] Integer NOT NULL,
-	[RoomId] Integer NOT NULL,
-Primary Key  ([UserId],[RoomId])
+Create table Member (
+	UserId Integer NOT NULL,
+	RoomId Integer NOT NULL,
+Primary Key  (UserId,RoomId)
 ) 
 go
 
-Create table [Bill] (
-	[Id] Integer Identity ,
-	[RoomId] Integer NOT NULL,
-	[MemberName] Nvarchar(255) NULL,
-	[RoomMoney] Integer NULL,
-	[ElectricMoney] Integer NULL,
-	[WaterMoney] Integer NULL,
-	[NetworkMoney] Integer NULL,
-	[OtherMoney] Integer NULL,
-	[LastElectricNumber] Integer NULL,
-	[ElectricNumber] Integer NULL,
-	[LastWaterNumber] Integer NULL,
-	[WaterNumber] Integer NULL,
-	[TotalMoney] Integer NULL,
-	[ModifiedBy] Nvarchar(100) NULL,
-	[CreatedDate] Datetime NULL,
-	[ModifiedDate] Datetime NULL,
-	[Status] Bit NULL,
-Primary Key  ([Id])
+Create table Bill (
+	Id Integer Identity ,
+	RoomId Integer NOT NULL,
+	MemberName Nvarchar(255) NULL,
+	RoomMoney Integer NULL,
+	ElectricMoney Integer NULL,
+	WaterMoney Integer NULL,
+	NetworkMoney Integer NULL,
+	OtherMoney Integer NULL,
+	LastElectricNumber Integer NULL,
+	ElectricNumber Integer NULL,
+	LastWaterNumber Integer NULL,
+	WaterNumber Integer NULL,
+	TotalMoney Integer NULL,
+	ModifiedBy Nvarchar(100) NULL,
+	CreatedDate Datetime NULL,
+	ModifiedDate Datetime NULL,
+	Status Bit NULL,
+Primary Key  (Id)
 ) 
 go
 
 
-Alter table [Member] add  foreign key([UserId]) references [User] ([Id]) 
+Alter table Member add  foreign key(UserId) references Users (Id) 
 go
-Alter table [House] add  foreign key([UserId]) references [User] ([Id]) 
+Alter table House add  foreign key(UserId) references Users (Id) 
 go
-Alter table [Room] add  foreign key([HouseId]) references [House] ([Id]) 
+Alter table Room add  foreign key(HouseId) references House (Id) 
 go
-Alter table [Member] add  foreign key([RoomId]) references [Room] ([Id]) 
+Alter table Member add  foreign key(RoomId) references Room (Id) 
 go
-Alter table [Bill] add  foreign key([RoomId]) references [Room] ([Id]) 
+Alter table Bill add  foreign key(RoomId) references Room (Id) 
 go
 
 

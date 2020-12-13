@@ -20,7 +20,7 @@ namespace QuanLyNhaChoThue.DTO
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
         public int Member { get; set; }
-        public int Status { get; set; }
+        public bool Status { get; set; }
 
     }
 }

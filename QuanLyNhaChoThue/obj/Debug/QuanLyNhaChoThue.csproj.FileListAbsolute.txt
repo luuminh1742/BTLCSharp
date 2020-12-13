@@ -1,7 +1,6 @@
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\bin\Debug\QuanLyNhaChoThue.exe.config
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\bin\Debug\QuanLyNhaChoThue.exe
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\bin\Debug\QuanLyNhaChoThue.pdb
-C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.csprojAssemblyReference.cache
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.FormMain.resources
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.Properties.Resources.resources
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.csproj.GenerateResource.cache
@@ -19,5 +18,8 @@ C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GU
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.Room.FormCreateBill.resources
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.Room.Member.FormMemberEdit.resources
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.Room.UC_RoomManager.resources
-C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill.UC_BillInfor.resources
 C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.Room.UC_RoomInfor.resources
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.Room.FormRoom.resources
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.csprojAssemblyReference.cache
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.Room.FormRoomInfor.resources
+C:\Source\CSharp\QuanLyNhaChoThue\QuanLyNhaChoThue\obj\Debug\QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill.FormBillInfor.resources
