@@ -37,11 +37,11 @@
             this.lbCreateDate = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.chkStatus = new System.Windows.Forms.CheckBox();
             this.lvRoomMoney = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnPrintBill = new System.Windows.Forms.Button();
-            this.chkStatus = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,6 +151,19 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Bảng tiền phòng";
             // 
+            // chkStatus
+            // 
+            this.chkStatus.AutoSize = true;
+            this.chkStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkStatus.Location = new System.Drawing.Point(150, 108);
+            this.chkStatus.Name = "chkStatus";
+            this.chkStatus.Size = new System.Drawing.Size(106, 24);
+            this.chkStatus.TabIndex = 1;
+            this.chkStatus.Text = "checkBox1";
+            this.chkStatus.UseVisualStyleBackColor = true;
+            this.chkStatus.CheckedChanged += new System.EventHandler(this.chkStatus_CheckedChanged);
+            this.chkStatus.Click += new System.EventHandler(this.chkStatus_Click);
+            // 
             // lvRoomMoney
             // 
             this.lvRoomMoney.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -181,7 +194,7 @@
             // btnPrintBill
             // 
             this.btnPrintBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPrintBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnPrintBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
             this.btnPrintBill.FlatAppearance.BorderSize = 0;
             this.btnPrintBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -192,19 +205,6 @@
             this.btnPrintBill.TabIndex = 2;
             this.btnPrintBill.Text = "In hóa đơn";
             this.btnPrintBill.UseVisualStyleBackColor = false;
-            // 
-            // chkStatus
-            // 
-            this.chkStatus.AutoSize = true;
-            this.chkStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkStatus.Location = new System.Drawing.Point(150, 108);
-            this.chkStatus.Name = "chkStatus";
-            this.chkStatus.Size = new System.Drawing.Size(106, 24);
-            this.chkStatus.TabIndex = 1;
-            this.chkStatus.Text = "checkBox1";
-            this.chkStatus.UseVisualStyleBackColor = true;
-            this.chkStatus.CheckedChanged += new System.EventHandler(this.chkStatus_CheckedChanged);
-            this.chkStatus.Click += new System.EventHandler(this.chkStatus_Click);
             // 
             // FormBillInfor
             // 

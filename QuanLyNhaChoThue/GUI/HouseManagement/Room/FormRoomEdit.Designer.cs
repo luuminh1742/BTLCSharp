@@ -93,7 +93,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,7 +109,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,7 +215,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
@@ -302,7 +302,7 @@
             this.txtRoomName.ForeColor = System.Drawing.Color.Black;
             this.txtRoomName.Location = new System.Drawing.Point(154, 3);
             this.txtRoomName.Name = "txtRoomName";
-            this.txtRoomName.Size = new System.Drawing.Size(297, 26);
+            this.txtRoomName.Size = new System.Drawing.Size(296, 26);
             this.txtRoomName.TabIndex = 0;
             this.txtRoomName.Text = "101";
             // 
@@ -312,7 +312,7 @@
             this.txtRoomMoney.ForeColor = System.Drawing.Color.Black;
             this.txtRoomMoney.Location = new System.Drawing.Point(154, 38);
             this.txtRoomMoney.Name = "txtRoomMoney";
-            this.txtRoomMoney.Size = new System.Drawing.Size(297, 26);
+            this.txtRoomMoney.Size = new System.Drawing.Size(296, 26);
             this.txtRoomMoney.TabIndex = 1;
             this.txtRoomMoney.Text = "0";
             // 
@@ -322,7 +322,7 @@
             this.txtElectricMoney.ForeColor = System.Drawing.Color.Black;
             this.txtElectricMoney.Location = new System.Drawing.Point(154, 73);
             this.txtElectricMoney.Name = "txtElectricMoney";
-            this.txtElectricMoney.Size = new System.Drawing.Size(297, 26);
+            this.txtElectricMoney.Size = new System.Drawing.Size(296, 26);
             this.txtElectricMoney.TabIndex = 2;
             this.txtElectricMoney.Text = "0";
             // 
@@ -332,7 +332,7 @@
             this.txtLastElectricNumber.ForeColor = System.Drawing.Color.Black;
             this.txtLastElectricNumber.Location = new System.Drawing.Point(154, 108);
             this.txtLastElectricNumber.Name = "txtLastElectricNumber";
-            this.txtLastElectricNumber.Size = new System.Drawing.Size(297, 26);
+            this.txtLastElectricNumber.Size = new System.Drawing.Size(296, 26);
             this.txtLastElectricNumber.TabIndex = 3;
             this.txtLastElectricNumber.Text = "0";
             // 
@@ -342,7 +342,7 @@
             this.txtWaterMoney.ForeColor = System.Drawing.Color.Black;
             this.txtWaterMoney.Location = new System.Drawing.Point(154, 143);
             this.txtWaterMoney.Name = "txtWaterMoney";
-            this.txtWaterMoney.Size = new System.Drawing.Size(297, 26);
+            this.txtWaterMoney.Size = new System.Drawing.Size(296, 26);
             this.txtWaterMoney.TabIndex = 4;
             this.txtWaterMoney.Text = "0";
             // 
@@ -352,7 +352,7 @@
             this.txtLastWaterNumber.ForeColor = System.Drawing.Color.Black;
             this.txtLastWaterNumber.Location = new System.Drawing.Point(154, 213);
             this.txtLastWaterNumber.Name = "txtLastWaterNumber";
-            this.txtLastWaterNumber.Size = new System.Drawing.Size(297, 26);
+            this.txtLastWaterNumber.Size = new System.Drawing.Size(296, 26);
             this.txtLastWaterNumber.TabIndex = 6;
             this.txtLastWaterNumber.Text = "0";
             // 
@@ -362,7 +362,7 @@
             this.txtNetworkMoney.ForeColor = System.Drawing.Color.Black;
             this.txtNetworkMoney.Location = new System.Drawing.Point(154, 283);
             this.txtNetworkMoney.Name = "txtNetworkMoney";
-            this.txtNetworkMoney.Size = new System.Drawing.Size(297, 26);
+            this.txtNetworkMoney.Size = new System.Drawing.Size(296, 26);
             this.txtNetworkMoney.TabIndex = 8;
             this.txtNetworkMoney.Text = "0";
             // 
@@ -372,7 +372,7 @@
             this.txtOtherMoney.ForeColor = System.Drawing.Color.Black;
             this.txtOtherMoney.Location = new System.Drawing.Point(154, 318);
             this.txtOtherMoney.Name = "txtOtherMoney";
-            this.txtOtherMoney.Size = new System.Drawing.Size(297, 26);
+            this.txtOtherMoney.Size = new System.Drawing.Size(296, 26);
             this.txtOtherMoney.TabIndex = 9;
             this.txtOtherMoney.Text = "0";
             // 
@@ -383,7 +383,7 @@
             this.txtDescription.Location = new System.Drawing.Point(154, 353);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(297, 84);
+            this.txtDescription.Size = new System.Drawing.Size(296, 84);
             this.txtDescription.TabIndex = 10;
             // 
             // cbbWaterMoneyType
@@ -398,7 +398,7 @@
             "Miễn phí"});
             this.cbbWaterMoneyType.Location = new System.Drawing.Point(154, 178);
             this.cbbWaterMoneyType.Name = "cbbWaterMoneyType";
-            this.cbbWaterMoneyType.Size = new System.Drawing.Size(297, 28);
+            this.cbbWaterMoneyType.Size = new System.Drawing.Size(296, 28);
             this.cbbWaterMoneyType.TabIndex = 5;
             this.cbbWaterMoneyType.SelectedValueChanged += new System.EventHandler(this.cbbWaterMoneyType_SelectedValueChanged);
             // 
@@ -413,7 +413,7 @@
             "Miễn phí"});
             this.cbbNetworkMoneyType.Location = new System.Drawing.Point(154, 248);
             this.cbbNetworkMoneyType.Name = "cbbNetworkMoneyType";
-            this.cbbNetworkMoneyType.Size = new System.Drawing.Size(297, 28);
+            this.cbbNetworkMoneyType.Size = new System.Drawing.Size(296, 28);
             this.cbbNetworkMoneyType.TabIndex = 7;
             this.cbbNetworkMoneyType.SelectedValueChanged += new System.EventHandler(this.cbbNetworkMoneyType_SelectedValueChanged);
             // 
@@ -422,7 +422,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(457, 35);
+            this.label13.Location = new System.Drawing.Point(456, 35);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(43, 20);
             this.label13.TabIndex = 3;
@@ -433,7 +433,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(457, 70);
+            this.label14.Location = new System.Drawing.Point(456, 70);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 20);
             this.label14.TabIndex = 11;
@@ -444,7 +444,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(457, 105);
+            this.label15.Location = new System.Drawing.Point(456, 105);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 20);
             this.label15.TabIndex = 11;
@@ -455,7 +455,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(457, 140);
+            this.label16.Location = new System.Drawing.Point(456, 140);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(43, 20);
             this.label16.TabIndex = 11;
@@ -466,7 +466,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(457, 210);
+            this.label17.Location = new System.Drawing.Point(456, 210);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(29, 20);
             this.label17.TabIndex = 11;
@@ -477,7 +477,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(457, 280);
+            this.label19.Location = new System.Drawing.Point(456, 280);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(43, 20);
             this.label19.TabIndex = 11;
@@ -488,7 +488,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(457, 315);
+            this.label20.Location = new System.Drawing.Point(456, 315);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(43, 20);
             this.label20.TabIndex = 11;
@@ -498,7 +498,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(643, 516);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnCancel);
