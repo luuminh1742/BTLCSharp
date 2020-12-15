@@ -42,15 +42,12 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Member
                 txtName.Text = user.FullName;
                 txtAddress.Text = user.Address;
                 txtPhone.Text = user.Phone;
-                if (user.Gender.Equals("Nam"))
+                if (user.Gender.Trim().Equals("Nam"))
                 {
-                    rbtMale.Checked = true;
-                }else if (user.Gender.Equals("Nữ"))
-                {
-                    rbtFemale.Checked = true;
+                    rdbMale.Checked = true;
                 }else
                 {
-                    rbtOther.Checked = true;
+                    rdbFemale.Checked = true;
                 }
                 btnDeleteMember.Visible = true;
             }
@@ -85,12 +82,10 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Member
             string phone = txtPhone.Text;
             string address = txtAddress.Text;
             string gender = "";
-            if (rbtMale.Checked)
-                gender = rbtMale.Text;
-            else if (rbtFemale.Checked)
-                gender = rbtFemale.Text;
-            else if (rbtOther.Checked)
-                gender = rbtOther.Text;
+            if (rdbMale.Checked)
+                gender = rdbMale.Text.Trim();
+            else if (rdbFemale.Checked)
+                gender = rdbFemale.Text.Trim();
             UserDTO userDTO = new UserDTO();
             userDTO.RoomId = user.RoomId;
             userDTO.FullName = name;
@@ -115,12 +110,10 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Member
             string phone = txtPhone.Text;
             string address = txtAddress.Text;
             string gender = "";
-            if (rbtMale.Checked)
-                gender = rbtMale.Text;
-            else if (rbtFemale.Checked)
-                gender = rbtFemale.Text;
-            else if (rbtOther.Checked)
-                gender = rbtOther.Text;
+            if (rdbMale.Checked)
+                gender = rdbMale.Text.Trim();
+            else if (rdbFemale.Checked)
+                gender = rdbFemale.Text.Trim();
             UserDTO userDTO = new UserDTO();
             userDTO.Id = user.Id;
             userDTO.FullName = name;

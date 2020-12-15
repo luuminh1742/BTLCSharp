@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRoom));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHelp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -86,11 +85,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rosewood Std Regular", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(20, 50);
+            this.label1.Location = new System.Drawing.Point(11, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 32);
+            this.label1.Size = new System.Drawing.Size(206, 31);
             this.label1.TabIndex = 3;
             this.label1.Text = "QUẢN LÝ NHÀ";
             // 
@@ -106,20 +105,24 @@
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(33)))), ((int)(((byte)(35)))));
+            this.btnLogout.BackgroundImage = global::QuanLyNhaChoThue.Properties.Resources.bg_btn6;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Image = global::QuanLyNhaChoThue.Properties.Resources.exit_25px;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(42, 455);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(143, 33);
+            this.btnLogout.Size = new System.Drawing.Size(123, 35);
             this.btnLogout.TabIndex = 3;
-            this.btnLogout.Text = "Đăng xuất";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.Text = "  Đăng xuất";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnAccountSetting
             // 
@@ -215,6 +218,7 @@
             this.btnMinSize.Size = new System.Drawing.Size(45, 30);
             this.btnMinSize.TabIndex = 4;
             this.btnMinSize.UseVisualStyleBackColor = true;
+            this.btnMinSize.Click += new System.EventHandler(this.btnMinSize_Click);
             // 
             // btnClose
             // 
@@ -244,6 +248,7 @@
             this.btnMaxSize.Size = new System.Drawing.Size(45, 30);
             this.btnMaxSize.TabIndex = 3;
             this.btnMaxSize.UseVisualStyleBackColor = true;
+            this.btnMaxSize.Click += new System.EventHandler(this.btnMaxSize_Click);
             // 
             // uC_Home1
             // 

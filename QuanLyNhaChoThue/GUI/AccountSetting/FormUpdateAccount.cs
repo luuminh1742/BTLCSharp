@@ -53,11 +53,9 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
                 string address = txtAddress.Text;
                 string gender = "";
                 if (rbtMale.Checked)
-                    gender = rbtMale.Text;
+                    gender = rbtMale.Text.Trim();
                 else if (rbtFemale.Checked)
-                    gender = rbtFemale.Text;
-                else if (rbtOther.Checked)
-                    gender = rbtOther.Text;
+                    gender = rbtFemale.Text.Trim();
                 UserDTO userDTO = new UserDTO();
                 userDTO.Id = user.Id;
                 userDTO.UserName = username;
@@ -91,17 +89,13 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
             txtName.Text = user.FullName;
             txtAddress.Text = user.Address;
             txtPhone.Text = user.Phone;
-            if (user.Gender.Equals("Nam"))
+            if (user.Gender.Trim().Equals("Nam"))
             {
                 rbtMale.Checked = true;
             }
             else if (user.Gender.Equals("Nữ"))
             {
                 rbtFemale.Checked = true;
-            }
-            else
-            {
-                rbtOther.Checked = true;
             }
             
         }

@@ -51,7 +51,6 @@ namespace QuanLyNhaChoThue.GUI
                 {
                     Thread thread = new Thread(new ThreadStart(ShowFormMain)); //Tạo luồng mới
                     thread.Start(); //Khởi chạy luồng
-                    this.Hide();
                     this.Close(); //đóng Form hiện tại. 
                     
                 }
@@ -60,9 +59,6 @@ namespace QuanLyNhaChoThue.GUI
                     MessageBox.Show("Đăng nhập thất bại ! ", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                
-
-
             }
         }
 

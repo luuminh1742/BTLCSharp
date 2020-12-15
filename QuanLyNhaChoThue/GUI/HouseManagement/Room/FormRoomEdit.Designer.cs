@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRoomEdit));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,6 +61,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,10 +71,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
             this.panel1.Controls.Add(this.lbTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(643, 45);
+            this.panel1.Size = new System.Drawing.Size(671, 35);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -84,43 +86,11 @@
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(241, 10);
+            this.lbTitle.Location = new System.Drawing.Point(241, 5);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(159, 24);
             this.lbTitle.TabIndex = 0;
             this.lbTitle.Text = "Cập nhật phòng";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(534, 64);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(93, 30);
-            this.btnUpdate.TabIndex = 11;
-            this.btnUpdate.Text = "Cập nhật";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(534, 107);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(93, 30);
-            this.btnCancel.TabIndex = 12;
-            this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
             // 
@@ -184,7 +154,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(3, 175);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 20);
+            this.label7.Size = new System.Drawing.Size(112, 35);
             this.label7.TabIndex = 3;
             this.label7.Text = "Tính tiền nước theo";
             // 
@@ -215,7 +185,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
@@ -300,9 +270,9 @@
             // 
             this.txtRoomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomName.ForeColor = System.Drawing.Color.Black;
-            this.txtRoomName.Location = new System.Drawing.Point(154, 3);
+            this.txtRoomName.Location = new System.Drawing.Point(152, 3);
             this.txtRoomName.Name = "txtRoomName";
-            this.txtRoomName.Size = new System.Drawing.Size(296, 26);
+            this.txtRoomName.Size = new System.Drawing.Size(292, 26);
             this.txtRoomName.TabIndex = 0;
             this.txtRoomName.Text = "101";
             // 
@@ -310,9 +280,9 @@
             // 
             this.txtRoomMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomMoney.ForeColor = System.Drawing.Color.Black;
-            this.txtRoomMoney.Location = new System.Drawing.Point(154, 38);
+            this.txtRoomMoney.Location = new System.Drawing.Point(152, 38);
             this.txtRoomMoney.Name = "txtRoomMoney";
-            this.txtRoomMoney.Size = new System.Drawing.Size(296, 26);
+            this.txtRoomMoney.Size = new System.Drawing.Size(292, 26);
             this.txtRoomMoney.TabIndex = 1;
             this.txtRoomMoney.Text = "0";
             // 
@@ -320,9 +290,9 @@
             // 
             this.txtElectricMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtElectricMoney.ForeColor = System.Drawing.Color.Black;
-            this.txtElectricMoney.Location = new System.Drawing.Point(154, 73);
+            this.txtElectricMoney.Location = new System.Drawing.Point(152, 73);
             this.txtElectricMoney.Name = "txtElectricMoney";
-            this.txtElectricMoney.Size = new System.Drawing.Size(296, 26);
+            this.txtElectricMoney.Size = new System.Drawing.Size(292, 26);
             this.txtElectricMoney.TabIndex = 2;
             this.txtElectricMoney.Text = "0";
             // 
@@ -330,9 +300,9 @@
             // 
             this.txtLastElectricNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastElectricNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtLastElectricNumber.Location = new System.Drawing.Point(154, 108);
+            this.txtLastElectricNumber.Location = new System.Drawing.Point(152, 108);
             this.txtLastElectricNumber.Name = "txtLastElectricNumber";
-            this.txtLastElectricNumber.Size = new System.Drawing.Size(296, 26);
+            this.txtLastElectricNumber.Size = new System.Drawing.Size(292, 26);
             this.txtLastElectricNumber.TabIndex = 3;
             this.txtLastElectricNumber.Text = "0";
             // 
@@ -340,9 +310,9 @@
             // 
             this.txtWaterMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWaterMoney.ForeColor = System.Drawing.Color.Black;
-            this.txtWaterMoney.Location = new System.Drawing.Point(154, 143);
+            this.txtWaterMoney.Location = new System.Drawing.Point(152, 143);
             this.txtWaterMoney.Name = "txtWaterMoney";
-            this.txtWaterMoney.Size = new System.Drawing.Size(296, 26);
+            this.txtWaterMoney.Size = new System.Drawing.Size(292, 26);
             this.txtWaterMoney.TabIndex = 4;
             this.txtWaterMoney.Text = "0";
             // 
@@ -350,9 +320,9 @@
             // 
             this.txtLastWaterNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastWaterNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtLastWaterNumber.Location = new System.Drawing.Point(154, 213);
+            this.txtLastWaterNumber.Location = new System.Drawing.Point(152, 213);
             this.txtLastWaterNumber.Name = "txtLastWaterNumber";
-            this.txtLastWaterNumber.Size = new System.Drawing.Size(296, 26);
+            this.txtLastWaterNumber.Size = new System.Drawing.Size(292, 26);
             this.txtLastWaterNumber.TabIndex = 6;
             this.txtLastWaterNumber.Text = "0";
             // 
@@ -360,9 +330,9 @@
             // 
             this.txtNetworkMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNetworkMoney.ForeColor = System.Drawing.Color.Black;
-            this.txtNetworkMoney.Location = new System.Drawing.Point(154, 283);
+            this.txtNetworkMoney.Location = new System.Drawing.Point(152, 283);
             this.txtNetworkMoney.Name = "txtNetworkMoney";
-            this.txtNetworkMoney.Size = new System.Drawing.Size(296, 26);
+            this.txtNetworkMoney.Size = new System.Drawing.Size(292, 26);
             this.txtNetworkMoney.TabIndex = 8;
             this.txtNetworkMoney.Text = "0";
             // 
@@ -370,9 +340,9 @@
             // 
             this.txtOtherMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOtherMoney.ForeColor = System.Drawing.Color.Black;
-            this.txtOtherMoney.Location = new System.Drawing.Point(154, 318);
+            this.txtOtherMoney.Location = new System.Drawing.Point(152, 318);
             this.txtOtherMoney.Name = "txtOtherMoney";
-            this.txtOtherMoney.Size = new System.Drawing.Size(296, 26);
+            this.txtOtherMoney.Size = new System.Drawing.Size(292, 26);
             this.txtOtherMoney.TabIndex = 9;
             this.txtOtherMoney.Text = "0";
             // 
@@ -380,10 +350,10 @@
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(154, 353);
+            this.txtDescription.Location = new System.Drawing.Point(152, 353);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(296, 84);
+            this.txtDescription.Size = new System.Drawing.Size(292, 84);
             this.txtDescription.TabIndex = 10;
             // 
             // cbbWaterMoneyType
@@ -396,9 +366,9 @@
             "Theo phòng",
             "Theo số công tơ",
             "Miễn phí"});
-            this.cbbWaterMoneyType.Location = new System.Drawing.Point(154, 178);
+            this.cbbWaterMoneyType.Location = new System.Drawing.Point(152, 178);
             this.cbbWaterMoneyType.Name = "cbbWaterMoneyType";
-            this.cbbWaterMoneyType.Size = new System.Drawing.Size(296, 28);
+            this.cbbWaterMoneyType.Size = new System.Drawing.Size(292, 28);
             this.cbbWaterMoneyType.TabIndex = 5;
             this.cbbWaterMoneyType.SelectedValueChanged += new System.EventHandler(this.cbbWaterMoneyType_SelectedValueChanged);
             // 
@@ -411,9 +381,9 @@
             "Theo đầu người",
             "Theo phòng",
             "Miễn phí"});
-            this.cbbNetworkMoneyType.Location = new System.Drawing.Point(154, 248);
+            this.cbbNetworkMoneyType.Location = new System.Drawing.Point(152, 248);
             this.cbbNetworkMoneyType.Name = "cbbNetworkMoneyType";
-            this.cbbNetworkMoneyType.Size = new System.Drawing.Size(296, 28);
+            this.cbbNetworkMoneyType.Size = new System.Drawing.Size(292, 28);
             this.cbbNetworkMoneyType.TabIndex = 7;
             this.cbbNetworkMoneyType.SelectedValueChanged += new System.EventHandler(this.cbbNetworkMoneyType_SelectedValueChanged);
             // 
@@ -422,7 +392,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(456, 35);
+            this.label13.Location = new System.Drawing.Point(450, 35);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(43, 20);
             this.label13.TabIndex = 3;
@@ -433,7 +403,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(456, 70);
+            this.label14.Location = new System.Drawing.Point(450, 70);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 20);
             this.label14.TabIndex = 11;
@@ -444,7 +414,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(456, 105);
+            this.label15.Location = new System.Drawing.Point(450, 105);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 20);
             this.label15.TabIndex = 11;
@@ -455,7 +425,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(456, 140);
+            this.label16.Location = new System.Drawing.Point(450, 140);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(43, 20);
             this.label16.TabIndex = 11;
@@ -466,7 +436,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(456, 210);
+            this.label17.Location = new System.Drawing.Point(450, 210);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(29, 20);
             this.label17.TabIndex = 11;
@@ -477,7 +447,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(456, 280);
+            this.label19.Location = new System.Drawing.Point(450, 280);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(43, 20);
             this.label19.TabIndex = 11;
@@ -488,18 +458,54 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(456, 315);
+            this.label20.Location = new System.Drawing.Point(450, 315);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(43, 20);
             this.label20.TabIndex = 11;
             this.label20.Text = "VNĐ";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(536, 107);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(123, 35);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
+            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(536, 64);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(123, 35);
+            this.btnUpdate.TabIndex = 11;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FormRoomEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(643, 516);
+            this.ClientSize = new System.Drawing.Size(671, 516);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 using QuanLyNhaChoThue.BLL;
@@ -20,9 +19,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
 
         private void pctAddHouse_Click(object sender, EventArgs e)
         {
-            var formEditHouse = new FormHouseEdit("ADD",0,"","","");
-            formEditHouse.ShowDialog();
-            UC_HouseManagement_Load(sender,e);
+            
         }
 
         private void UC_HouseManagement_Load(object sender, EventArgs e)
@@ -42,6 +39,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
             var formRoom = new FormRoom(houseId);
             formRoom.houseId = houseId;
             formRoom.ShowDialog();
+            
         }
         private void lvHouse_DoubleClick(object sender, EventArgs e)
         {
@@ -50,7 +48,6 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
             houseId = listHouse[indexHouseSelected].Id;
             Thread thread = new Thread(new ThreadStart(ShowFormRoom)); //Tạo luồng mới
             thread.Start(); //Khởi chạy luồng
-            //UC_HouseManagement_Load(sender,e);
             FormMain.formMain.Close();
 
         }
@@ -58,6 +55,13 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
         private void lvHouse_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddHouse_Click(object sender, EventArgs e)
+        {
+            var formEditHouse = new FormHouseEdit("ADD", 0, "", "", "");
+            formEditHouse.ShowDialog();
+            UC_HouseManagement_Load(sender, e);
         }
     }
 }

@@ -28,23 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.SidePanel = new System.Windows.Forms.Panel();
-            this.panelTitle = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.uC_Home1 = new QuanLyNhaChoThue.GUI.Home.UC_Home();
-            this.uC_ManageAccount1 = new QuanLyNhaChoThue.GUI.AccountSetting.UC_ManageAccount();
-            this.uC_HouseManagement1 = new QuanLyNhaChoThue.GUI.HouseManagement.UC_HouseManagement();
-            this.btnMinSize = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnMaxSize = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SidePanel = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAccountSetting = new System.Windows.Forms.Button();
             this.btnHouseManagement = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelTitle = new System.Windows.Forms.Panel();
+            this.btnMinSize = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnMaxSize = new System.Windows.Forms.Button();
+            this.uC_Home1 = new QuanLyNhaChoThue.GUI.Home.UC_Home();
+            this.uC_ManageAccount1 = new QuanLyNhaChoThue.GUI.AccountSetting.UC_ManageAccount();
+            this.uC_HouseManagement1 = new QuanLyNhaChoThue.GUI.HouseManagement.UC_HouseManagement();
             this.panel1.SuspendLayout();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
@@ -66,14 +65,33 @@
             this.panel1.Size = new System.Drawing.Size(223, 511);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // btnHelp
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(223, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(781, 5);
-            this.panel2.TabIndex = 1;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.ForeColor = System.Drawing.Color.White;
+            this.btnHelp.Image = global::QuanLyNhaChoThue.Properties.Resources.help_25px;
+            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHelp.Location = new System.Drawing.Point(8, 262);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(215, 54);
+            this.btnHelp.TabIndex = 13;
+            this.btnHelp.Text = "  Trợ giúp";
+            this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(11, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(206, 31);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "QUẢN LÝ NHÀ";
             // 
             // SidePanel
             // 
@@ -82,6 +100,98 @@
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(8, 54);
             this.SidePanel.TabIndex = 2;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(33)))), ((int)(((byte)(35)))));
+            this.btnLogout.BackgroundImage = global::QuanLyNhaChoThue.Properties.Resources.bg_btn6;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogout.Image = global::QuanLyNhaChoThue.Properties.Resources.exit_25px;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(42, 455);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(123, 35);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "  Đăng xuất";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnAccountSetting
+            // 
+            this.btnAccountSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(33)))), ((int)(((byte)(35)))));
+            this.btnAccountSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAccountSetting.FlatAppearance.BorderSize = 0;
+            this.btnAccountSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccountSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccountSetting.ForeColor = System.Drawing.Color.White;
+            this.btnAccountSetting.Image = global::QuanLyNhaChoThue.Properties.Resources.user_settings_25px;
+            this.btnAccountSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccountSetting.Location = new System.Drawing.Point(8, 206);
+            this.btnAccountSetting.Name = "btnAccountSetting";
+            this.btnAccountSetting.Size = new System.Drawing.Size(215, 54);
+            this.btnAccountSetting.TabIndex = 12;
+            this.btnAccountSetting.Text = "   Quản lý tài khoản";
+            this.btnAccountSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccountSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAccountSetting.UseVisualStyleBackColor = false;
+            this.btnAccountSetting.Click += new System.EventHandler(this.btnAccountSetting_Click);
+            // 
+            // btnHouseManagement
+            // 
+            this.btnHouseManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(33)))), ((int)(((byte)(35)))));
+            this.btnHouseManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHouseManagement.FlatAppearance.BorderSize = 0;
+            this.btnHouseManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHouseManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHouseManagement.ForeColor = System.Drawing.Color.White;
+            this.btnHouseManagement.Image = global::QuanLyNhaChoThue.Properties.Resources.business_building_25px;
+            this.btnHouseManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHouseManagement.Location = new System.Drawing.Point(8, 150);
+            this.btnHouseManagement.Name = "btnHouseManagement";
+            this.btnHouseManagement.Size = new System.Drawing.Size(215, 54);
+            this.btnHouseManagement.TabIndex = 11;
+            this.btnHouseManagement.Text = "   Quản lý nhà";
+            this.btnHouseManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHouseManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHouseManagement.UseVisualStyleBackColor = false;
+            this.btnHouseManagement.Click += new System.EventHandler(this.btnHouseManagement_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(33)))), ((int)(((byte)(35)))));
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = global::QuanLyNhaChoThue.Properties.Resources.windows_client_25px;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(8, 94);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(215, 54);
+            this.btnHome.TabIndex = 10;
+            this.btnHome.Text = "   Trang chủ";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(223, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(781, 5);
+            this.panel2.TabIndex = 1;
             // 
             // panelTitle
             // 
@@ -96,44 +206,6 @@
             this.panelTitle.TabIndex = 2;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rosewood Std Regular", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(20, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 32);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "QUẢN LÝ NHÀ";
-            // 
-            // uC_Home1
-            // 
-            this.uC_Home1.BackColor = System.Drawing.Color.White;
-            this.uC_Home1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Home1.Location = new System.Drawing.Point(223, 35);
-            this.uC_Home1.Name = "uC_Home1";
-            this.uC_Home1.Size = new System.Drawing.Size(781, 476);
-            this.uC_Home1.TabIndex = 3;
-            // 
-            // uC_ManageAccount1
-            // 
-            this.uC_ManageAccount1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.uC_ManageAccount1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_ManageAccount1.Location = new System.Drawing.Point(0, 0);
-            this.uC_ManageAccount1.Name = "uC_ManageAccount1";
-            this.uC_ManageAccount1.Size = new System.Drawing.Size(1004, 511);
-            this.uC_ManageAccount1.TabIndex = 5;
-            // 
-            // uC_HouseManagement1
-            // 
-            this.uC_HouseManagement1.BackColor = System.Drawing.Color.White;
-            this.uC_HouseManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_HouseManagement1.Location = new System.Drawing.Point(0, 0);
-            this.uC_HouseManagement1.Name = "uC_HouseManagement1";
-            this.uC_HouseManagement1.Size = new System.Drawing.Size(1004, 511);
-            this.uC_HouseManagement1.TabIndex = 4;
-            // 
             // btnMinSize
             // 
             this.btnMinSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -146,6 +218,7 @@
             this.btnMinSize.Size = new System.Drawing.Size(45, 30);
             this.btnMinSize.TabIndex = 4;
             this.btnMinSize.UseVisualStyleBackColor = true;
+            this.btnMinSize.Click += new System.EventHandler(this.btnMinSize_Click);
             this.btnMinSize.MouseLeave += new System.EventHandler(this.btnMinSize_MouseLeave);
             this.btnMinSize.MouseHover += new System.EventHandler(this.btnMinSize_MouseHover);
             // 
@@ -181,102 +254,32 @@
             this.btnMaxSize.MouseLeave += new System.EventHandler(this.btnMaxSize_MouseLeave);
             this.btnMaxSize.MouseHover += new System.EventHandler(this.btnMaxSize_MouseHover);
             // 
-            // btnHelp
+            // uC_Home1
             // 
-            this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHelp.ForeColor = System.Drawing.Color.White;
-            this.btnHelp.Image = global::QuanLyNhaChoThue.Properties.Resources.help_25px;
-            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(8, 262);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(215, 54);
-            this.btnHelp.TabIndex = 4;
-            this.btnHelp.Text = "  Trợ giúp";
-            this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHelp.UseVisualStyleBackColor = true;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            this.uC_Home1.BackColor = System.Drawing.Color.White;
+            this.uC_Home1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Home1.Location = new System.Drawing.Point(223, 35);
+            this.uC_Home1.Name = "uC_Home1";
+            this.uC_Home1.Size = new System.Drawing.Size(781, 476);
+            this.uC_Home1.TabIndex = 3;
             // 
-            // btnLogout
+            // uC_ManageAccount1
             // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(42, 455);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(143, 33);
-            this.btnLogout.TabIndex = 3;
-            this.btnLogout.Text = "Đăng xuất";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.uC_ManageAccount1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.uC_ManageAccount1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_ManageAccount1.Location = new System.Drawing.Point(0, 0);
+            this.uC_ManageAccount1.Name = "uC_ManageAccount1";
+            this.uC_ManageAccount1.Size = new System.Drawing.Size(1004, 511);
+            this.uC_ManageAccount1.TabIndex = 5;
             // 
-            // btnAccountSetting
+            // uC_HouseManagement1
             // 
-            this.btnAccountSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(33)))), ((int)(((byte)(35)))));
-            this.btnAccountSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAccountSetting.FlatAppearance.BorderSize = 0;
-            this.btnAccountSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccountSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccountSetting.ForeColor = System.Drawing.Color.White;
-            this.btnAccountSetting.Image = global::QuanLyNhaChoThue.Properties.Resources.user_settings_25px;
-            this.btnAccountSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccountSetting.Location = new System.Drawing.Point(8, 206);
-            this.btnAccountSetting.Name = "btnAccountSetting";
-            this.btnAccountSetting.Size = new System.Drawing.Size(215, 54);
-            this.btnAccountSetting.TabIndex = 2;
-            this.btnAccountSetting.Text = "   Quản lý tài khoản";
-            this.btnAccountSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccountSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAccountSetting.UseVisualStyleBackColor = false;
-            this.btnAccountSetting.Click += new System.EventHandler(this.btnAccountSetting_Click);
-            // 
-            // btnHouseManagement
-            // 
-            this.btnHouseManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(33)))), ((int)(((byte)(35)))));
-            this.btnHouseManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHouseManagement.FlatAppearance.BorderSize = 0;
-            this.btnHouseManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHouseManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHouseManagement.ForeColor = System.Drawing.Color.White;
-            this.btnHouseManagement.Image = global::QuanLyNhaChoThue.Properties.Resources.business_building_25px;
-            this.btnHouseManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHouseManagement.Location = new System.Drawing.Point(8, 150);
-            this.btnHouseManagement.Name = "btnHouseManagement";
-            this.btnHouseManagement.Size = new System.Drawing.Size(215, 54);
-            this.btnHouseManagement.TabIndex = 1;
-            this.btnHouseManagement.Text = "   Quản lý nhà";
-            this.btnHouseManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHouseManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHouseManagement.UseVisualStyleBackColor = false;
-            this.btnHouseManagement.Click += new System.EventHandler(this.btnHouseManagement_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(33)))), ((int)(((byte)(35)))));
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = global::QuanLyNhaChoThue.Properties.Resources.windows_client_25px;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(8, 94);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(215, 54);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "   Trang chủ";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.uC_HouseManagement1.BackColor = System.Drawing.Color.White;
+            this.uC_HouseManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_HouseManagement1.Location = new System.Drawing.Point(0, 0);
+            this.uC_HouseManagement1.Name = "uC_HouseManagement1";
+            this.uC_HouseManagement1.Size = new System.Drawing.Size(1004, 511);
+            this.uC_HouseManagement1.TabIndex = 4;
             // 
             // FormMain
             // 

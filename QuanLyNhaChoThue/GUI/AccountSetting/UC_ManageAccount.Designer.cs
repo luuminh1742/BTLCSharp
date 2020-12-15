@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ManageAccount));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -204,14 +205,16 @@
             // btnChangePassword
             // 
             this.btnChangePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnChangePassword.BackColor = System.Drawing.Color.White;
+            this.btnChangePassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.BackgroundImage")));
+            this.btnChangePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnChangePassword.FlatAppearance.BorderSize = 0;
             this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
-            this.btnChangePassword.Location = new System.Drawing.Point(209, 359);
+            this.btnChangePassword.Location = new System.Drawing.Point(182, 359);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(170, 35);
+            this.btnChangePassword.Size = new System.Drawing.Size(157, 35);
             this.btnChangePassword.TabIndex = 4;
             this.btnChangePassword.Text = "Thay đổi mật khẩu";
             this.btnChangePassword.UseVisualStyleBackColor = false;
@@ -220,14 +223,16 @@
             // btnUpdateInfor
             // 
             this.btnUpdateInfor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnUpdateInfor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnUpdateInfor.BackColor = System.Drawing.Color.White;
+            this.btnUpdateInfor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateInfor.BackgroundImage")));
+            this.btnUpdateInfor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnUpdateInfor.FlatAppearance.BorderSize = 0;
             this.btnUpdateInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateInfor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateInfor.ForeColor = System.Drawing.Color.White;
             this.btnUpdateInfor.Location = new System.Drawing.Point(19, 359);
             this.btnUpdateInfor.Name = "btnUpdateInfor";
-            this.btnUpdateInfor.Size = new System.Drawing.Size(170, 35);
+            this.btnUpdateInfor.Size = new System.Drawing.Size(157, 35);
             this.btnUpdateInfor.TabIndex = 3;
             this.btnUpdateInfor.Text = "Cập nhật thông tin";
             this.btnUpdateInfor.UseVisualStyleBackColor = false;

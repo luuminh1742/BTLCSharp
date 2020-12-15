@@ -194,14 +194,16 @@
             // btnPrintBill
             // 
             this.btnPrintBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPrintBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
+            this.btnPrintBill.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPrintBill.BackgroundImage = global::QuanLyNhaChoThue.Properties.Resources.bg_btn6;
+            this.btnPrintBill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPrintBill.FlatAppearance.BorderSize = 0;
             this.btnPrintBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintBill.ForeColor = System.Drawing.Color.White;
             this.btnPrintBill.Location = new System.Drawing.Point(19, 451);
             this.btnPrintBill.Name = "btnPrintBill";
-            this.btnPrintBill.Size = new System.Drawing.Size(106, 35);
+            this.btnPrintBill.Size = new System.Drawing.Size(123, 35);
             this.btnPrintBill.TabIndex = 2;
             this.btnPrintBill.Text = "In hóa đơn";
             this.btnPrintBill.UseVisualStyleBackColor = false;

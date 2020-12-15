@@ -10,16 +10,19 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
     public partial class FormRoom : Form
     {
         public int houseId = 0;
+        public static Form formRoom;
         //public static int houseId = UC_HouseManagement.houseId;
         public FormRoom()
         {
             InitializeComponent();
+            formRoom = this;
         }
         public FormRoom(int houseId)
         {
             InitializeComponent();
             this.houseId = houseId;
             uC_RoomManager1.houseId = houseId;
+            formRoom = this;
         }
 
         private void FormRoom_Load(object sender, EventArgs e)
@@ -27,7 +30,15 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             SidePanel.Height = btnHouseManagement.Height;
             SidePanel.Top = btnHouseManagement.Top;
             uC_RoomManager1.BringToFront();
-            
+            if (FormMain.formMain.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -50,9 +61,6 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             Thread thread = new Thread(new ThreadStart(ShowFormMain)); //Tạo luồng mới
             thread.Start(); //Khởi chạy luồng
             this.Close(); //đóng Form hiện tại. (Form1)
-            /*FormMain.formMain.Show();
-            this.Close();*/
-
         }
 
         private void btnAccountSetting_Click(object sender, EventArgs e)
@@ -73,7 +81,6 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            //FormLogin.formLogin.Close();
         }
 
         private void panelTitle_MouseDown(object sender, MouseEventArgs e)
@@ -89,6 +96,32 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
         private void btnClose_MouseLeave(object sender, EventArgs e)
         {
             btnClose.BackColor = Color.White;
+        }
+        private void ShowFormLogin()
+        {
+            var formLogin = new FormLogin();
+            formLogin.ShowDialog();
+        }
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(ShowFormLogin));
+            thread.Start();
+            this.Close();
+        }
+
+        private void btnMinSize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMaxSize_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                return;
+            }
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿using QuanLyNhaChoThue.Utils;
+﻿using QuanLyNhaChoThue.GUI.HouseManagement.Room;
+using QuanLyNhaChoThue.Utils;
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace QuanLyNhaChoThue.GUI
@@ -10,6 +12,7 @@ namespace QuanLyNhaChoThue.GUI
     {
         public static Form formMain;
         private string at = "";
+        
         public FormMain()
         {
             InitializeComponent();
@@ -29,6 +32,14 @@ namespace QuanLyNhaChoThue.GUI
                 SidePanel.Height = btnHouseManagement.Height;
                 SidePanel.Top = btnHouseManagement.Top;
                 uC_HouseManagement1.BringToFront();
+                if (FormRoom.formRoom.WindowState == FormWindowState.Maximized)
+                {
+                    this.WindowState = FormWindowState.Maximized;
+                }
+                else
+                {
+                    this.WindowState = FormWindowState.Normal;
+                }
             }
         }
 
@@ -53,11 +64,17 @@ namespace QuanLyNhaChoThue.GUI
             uC_ManageAccount1.BringToFront();
         }
 
+        private void ShowFormLogin()
+        {
+            var formLogin = new FormLogin();
+            formLogin.ShowDialog();
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            Thread thread = new Thread(new ThreadStart(ShowFormLogin));
+            thread.Start();
             this.Close();
-            var formLogin = new FormLogin();
-            formLogin.Show();
         }
 
         
@@ -65,12 +82,12 @@ namespace QuanLyNhaChoThue.GUI
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            //FormLogin.formLogin.Close();
         }
 
         private void btnClose_MouseHover(object sender, EventArgs e)
         {
             btnClose.BackColor = Color.Red;
+            
         }
 
         private void btnClose_MouseLeave(object sender, EventArgs e)
@@ -105,14 +122,13 @@ namespace QuanLyNhaChoThue.GUI
 
         private void btnMaxSize_Click(object sender, EventArgs e)
         {
-            if(this.MaximizeBox)
+            if (this.WindowState == FormWindowState.Maximized)
             {
-                this.MinimumSize = new Size(1200, 980); ;
+                this.WindowState = FormWindowState.Normal;
+                return;
             }
-            else
-            {
-                this.MinimumSize = new Size(1004, 511); 
-            }
+            this.WindowState = FormWindowState.Maximized;
+
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
@@ -121,6 +137,11 @@ namespace QuanLyNhaChoThue.GUI
             SidePanel.Top = btnHelp.Top;
             ProcessStartInfo sInfo = new ProcessStartInfo("http://google.com/");
             Process.Start(sInfo);
+        }
+
+        private void btnMinSize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

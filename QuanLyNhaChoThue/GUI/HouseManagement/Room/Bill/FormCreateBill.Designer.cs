@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateBill));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtLastWater = new System.Windows.Forms.TextBox();
             this.txtLastElectric = new System.Windows.Forms.TextBox();
@@ -37,9 +38,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lblDateCreate = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnCreateBill = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -129,6 +130,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -149,22 +151,6 @@
             this.label4.Size = new System.Drawing.Size(130, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tạo hóa đơn";
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(326, 181);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(85, 35);
-            this.btnExit.TabIndex = 12;
-            this.btnExit.Text = "Hủy";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label3
             // 
@@ -187,9 +173,29 @@
             this.lblDateCreate.Size = new System.Drawing.Size(0, 20);
             this.lblDateCreate.TabIndex = 10;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.SystemColors.Control;
+            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(308, 181);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(123, 35);
+            this.btnExit.TabIndex = 12;
+            this.btnExit.Text = "Hủy";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // btnCreateBill
             // 
-            this.btnCreateBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
+            this.btnCreateBill.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCreateBill.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCreateBill.BackgroundImage")));
+            this.btnCreateBill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCreateBill.FlatAppearance.BorderSize = 0;
             this.btnCreateBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,7 +203,7 @@
             this.btnCreateBill.Location = new System.Drawing.Point(177, 181);
             this.btnCreateBill.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateBill.Name = "btnCreateBill";
-            this.btnCreateBill.Size = new System.Drawing.Size(129, 35);
+            this.btnCreateBill.Size = new System.Drawing.Size(123, 35);
             this.btnCreateBill.TabIndex = 9;
             this.btnCreateBill.Text = "Tạo hóa đơn";
             this.btnCreateBill.UseVisualStyleBackColor = false;

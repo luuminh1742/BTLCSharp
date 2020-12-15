@@ -56,7 +56,6 @@
     <Compile Include="DTO\AbstractDTO.cs" />
     <Compile Include="DTO\BillDTO.cs" />
     <Compile Include="DTO\HouseDTO.cs" />
-    <Compile Include="DTO\MemberDTO.cs" />
     <Compile Include="DTO\RoomDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="DTO\ViewStatisticDTO.cs" />
@@ -138,12 +137,6 @@
     <Compile Include="GUI\HouseManagement\Room\Member\FormMemberEdit.Designer.cs">
       <DependentUpon>FormMemberEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\HouseManagement\Room\UC_RoomInfor.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\HouseManagement\Room\UC_RoomInfor.Designer.cs">
-      <DependentUpon>UC_RoomInfor.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\HouseManagement\Room\UC_RoomManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -200,9 +193,6 @@
     <EmbeddedResource Include="GUI\HouseManagement\Room\Member\FormMemberEdit.resx">
       <DependentUpon>FormMemberEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HouseManagement\Room\UC_RoomInfor.resx">
-      <DependentUpon>UC_RoomInfor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HouseManagement\Room\UC_RoomManager.resx">
       <DependentUpon>UC_RoomManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,9 +222,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="database\create_table.txt" />
+    <Folder Include="database\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Image\money_25px.png" />
     <None Include="Image\subtract_15px.png" />
     <None Include="Image\maximize_button_15px.png" />
@@ -254,6 +245,17 @@
     <None Include="Image\add_25px.png" />
     <None Include="Image\edit_property_25px.png" />
     <None Include="Image\add_user_25px.png" />
+    <None Include="Image\bg_bgn3.png" />
+    <Content Include="Image\bg_btn.png" />
+    <None Include="Image\gb_btn1.png" />
+    <None Include="Image\bg_btn2.png" />
+    <None Include="Image\bg_btn4.png" />
+    <None Include="Image\bg_btn5.png" />
+    <None Include="Image\bg_btn6.png" />
+    <None Include="Image\bg_btn7.png" />
+    <None Include="Image\exit_50px.png" />
+    <None Include="Image\exit_30px.png" />
+    <None Include="Image\exit_25px.png" />
     <Content Include="Image\icons8_home_50.png" />
     <None Include="Image\icon_trang_chu_32px.png" />
     <None Include="Image\icon_trang-chu_checked_32px.png" />

@@ -30,8 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnModify = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.RichTextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtHouseName = new System.Windows.Forms.TextBox();
@@ -39,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(479, 45);
+            this.panel1.Size = new System.Drawing.Size(479, 35);
             this.panel1.TabIndex = 6;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -62,45 +62,13 @@
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(185, 9);
+            this.lbTitle.Location = new System.Drawing.Point(185, 5);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(145, 24);
             this.lbTitle.TabIndex = 0;
             this.lbTitle.Text = "Chỉnh sửa nhà";
             this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(279, 237);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 35);
-            this.btnExit.TabIndex = 14;
-            this.btnExit.Text = "Hủy";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnModify
-            // 
-            this.btnModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
-            this.btnModify.FlatAppearance.BorderSize = 0;
-            this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModify.ForeColor = System.Drawing.Color.White;
-            this.btnModify.Location = new System.Drawing.Point(148, 237);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(2);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(100, 35);
-            this.btnModify.TabIndex = 13;
-            this.btnModify.Text = "Lưu";
-            this.btnModify.UseVisualStyleBackColor = false;
-            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // txtDescription
             // 
@@ -180,7 +148,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtHouseName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtDescription, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtAddress, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 50);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(28, 63);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
@@ -188,6 +156,42 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(426, 171);
             this.tableLayoutPanel1.TabIndex = 15;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.SystemColors.Control;
+            this.btnExit.BackgroundImage = global::QuanLyNhaChoThue.Properties.Resources.bg_btn6;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(275, 239);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(123, 35);
+            this.btnExit.TabIndex = 14;
+            this.btnExit.Text = "Hủy";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnModify
+            // 
+            this.btnModify.BackColor = System.Drawing.SystemColors.Control;
+            this.btnModify.BackgroundImage = global::QuanLyNhaChoThue.Properties.Resources.bg_btn6;
+            this.btnModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnModify.FlatAppearance.BorderSize = 0;
+            this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModify.ForeColor = System.Drawing.Color.White;
+            this.btnModify.Location = new System.Drawing.Point(148, 239);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(123, 35);
+            this.btnModify.TabIndex = 13;
+            this.btnModify.Text = "Lưu";
+            this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // FormHouseEdit
             // 

@@ -15,7 +15,6 @@ go
 
 Create table [Users] (
 	[Id] Integer Identity NOT NULL,
-	[RoomId] Integer NULL,
 	[UserName] Varchar(200) NULL,
 	[Password] Varchar(255) NULL,
 	[FullName] Nvarchar(100) NULL,
@@ -25,6 +24,7 @@ Create table [Users] (
 	[CreatedDate] Datetime NULL,
 	[ModifiedDate] Datetime NULL,
 	[Status] Bit NULL,
+	[RoomId] Integer NULL,
 Primary Key  ([Id])
 ) 
 go

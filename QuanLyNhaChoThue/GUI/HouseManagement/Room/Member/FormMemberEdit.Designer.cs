@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMemberEdit));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rbtOther = new System.Windows.Forms.RadioButton();
-            this.rbtFemale = new System.Windows.Forms.RadioButton();
-            this.rbtMale = new System.Windows.Forms.RadioButton();
+            this.rdbFemale = new System.Windows.Forms.RadioButton();
+            this.rdbMale = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,9 +42,9 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.btnDeleteMember = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDeleteMember = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -54,10 +54,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
             this.panel1.Controls.Add(this.lbTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(467, 45);
+            this.panel1.Size = new System.Drawing.Size(467, 35);
             this.panel1.TabIndex = 9;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -68,7 +69,7 @@
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(130, 9);
+            this.lbTitle.Location = new System.Drawing.Point(130, 5);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(208, 24);
@@ -102,9 +103,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.rbtOther);
-            this.panel2.Controls.Add(this.rbtFemale);
-            this.panel2.Controls.Add(this.rbtMale);
+            this.panel2.Controls.Add(this.rdbFemale);
+            this.panel2.Controls.Add(this.rdbMale);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(132, 92);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -112,40 +112,28 @@
             this.panel2.Size = new System.Drawing.Size(300, 41);
             this.panel2.TabIndex = 0;
             // 
-            // rbtOther
+            // rdbFemale
             // 
-            this.rbtOther.AutoSize = true;
-            this.rbtOther.Location = new System.Drawing.Point(230, 3);
-            this.rbtOther.Margin = new System.Windows.Forms.Padding(2);
-            this.rbtOther.Name = "rbtOther";
-            this.rbtOther.Size = new System.Drawing.Size(63, 24);
-            this.rbtOther.TabIndex = 4;
-            this.rbtOther.Text = "Khác";
-            this.rbtOther.UseVisualStyleBackColor = true;
+            this.rdbFemale.AutoSize = true;
+            this.rdbFemale.Location = new System.Drawing.Point(70, 4);
+            this.rdbFemale.Name = "rdbFemale";
+            this.rdbFemale.Size = new System.Drawing.Size(47, 24);
+            this.rdbFemale.TabIndex = 3;
+            this.rdbFemale.TabStop = true;
+            this.rdbFemale.Text = "Nữ";
+            this.rdbFemale.UseVisualStyleBackColor = true;
             // 
-            // rbtFemale
+            // rdbMale
             // 
-            this.rbtFemale.AutoSize = true;
-            this.rbtFemale.Location = new System.Drawing.Point(125, 3);
-            this.rbtFemale.Margin = new System.Windows.Forms.Padding(2);
-            this.rbtFemale.Name = "rbtFemale";
-            this.rbtFemale.Size = new System.Drawing.Size(47, 24);
-            this.rbtFemale.TabIndex = 3;
-            this.rbtFemale.Text = "Nữ";
-            this.rbtFemale.UseVisualStyleBackColor = true;
-            // 
-            // rbtMale
-            // 
-            this.rbtMale.AutoSize = true;
-            this.rbtMale.Checked = true;
-            this.rbtMale.Location = new System.Drawing.Point(22, 3);
-            this.rbtMale.Margin = new System.Windows.Forms.Padding(2);
-            this.rbtMale.Name = "rbtMale";
-            this.rbtMale.Size = new System.Drawing.Size(60, 24);
-            this.rbtMale.TabIndex = 2;
-            this.rbtMale.TabStop = true;
-            this.rbtMale.Text = "Nam";
-            this.rbtMale.UseVisualStyleBackColor = true;
+            this.rdbMale.AutoSize = true;
+            this.rdbMale.Checked = true;
+            this.rdbMale.Location = new System.Drawing.Point(4, 4);
+            this.rdbMale.Name = "rdbMale";
+            this.rdbMale.Size = new System.Drawing.Size(60, 24);
+            this.rdbMale.TabIndex = 2;
+            this.rdbMale.TabStop = true;
+            this.rdbMale.Text = "Nam";
+            this.rdbMale.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -201,7 +189,7 @@
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(288, 26);
-            this.txtAddress.TabIndex = 5;
+            this.txtAddress.TabIndex = 4;
             // 
             // txtName
             // 
@@ -211,17 +199,36 @@
             this.txtName.Size = new System.Drawing.Size(288, 26);
             this.txtName.TabIndex = 0;
             // 
+            // btnDeleteMember
+            // 
+            this.btnDeleteMember.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDeleteMember.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteMember.BackgroundImage")));
+            this.btnDeleteMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDeleteMember.FlatAppearance.BorderSize = 0;
+            this.btnDeleteMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteMember.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteMember.Location = new System.Drawing.Point(323, 262);
+            this.btnDeleteMember.Name = "btnDeleteMember";
+            this.btnDeleteMember.Size = new System.Drawing.Size(123, 35);
+            this.btnDeleteMember.TabIndex = 13;
+            this.btnDeleteMember.Text = "Xóa";
+            this.btnDeleteMember.UseVisualStyleBackColor = false;
+            this.btnDeleteMember.Click += new System.EventHandler(this.btnDeleteMember_Click);
+            // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(225, 263);
+            this.btnCancel.Location = new System.Drawing.Point(193, 262);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(80, 35);
+            this.btnCancel.Size = new System.Drawing.Size(123, 35);
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -229,34 +236,21 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
+            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(122, 263);
+            this.btnAdd.Location = new System.Drawing.Point(63, 262);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(80, 35);
+            this.btnAdd.Size = new System.Drawing.Size(123, 35);
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Lưu";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnDeleteMember
-            // 
-            this.btnDeleteMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
-            this.btnDeleteMember.FlatAppearance.BorderSize = 0;
-            this.btnDeleteMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteMember.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteMember.Location = new System.Drawing.Point(340, 263);
-            this.btnDeleteMember.Name = "btnDeleteMember";
-            this.btnDeleteMember.Size = new System.Drawing.Size(80, 35);
-            this.btnDeleteMember.TabIndex = 13;
-            this.btnDeleteMember.Text = "Xóa";
-            this.btnDeleteMember.UseVisualStyleBackColor = false;
-            this.btnDeleteMember.Click += new System.EventHandler(this.btnDeleteMember_Click);
             // 
             // FormMemberEdit
             // 
@@ -290,9 +284,6 @@
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton rbtOther;
-        private System.Windows.Forms.RadioButton rbtFemale;
-        private System.Windows.Forms.RadioButton rbtMale;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -303,5 +294,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDeleteMember;
+        private System.Windows.Forms.RadioButton rdbFemale;
+        private System.Windows.Forms.RadioButton rdbMale;
     }
 }
