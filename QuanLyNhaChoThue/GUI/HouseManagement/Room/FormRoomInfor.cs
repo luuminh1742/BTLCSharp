@@ -2,6 +2,7 @@
 using QuanLyNhaChoThue.DTO;
 using QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill;
 using QuanLyNhaChoThue.GUI.HouseManagement.Room.Member;
+using QuanLyNhaChoThue.Utils;
 using System;
 using System.Windows.Forms;
 
@@ -175,7 +176,8 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             user.Address = dgvMember.Rows[row].Cells[5].Value.ToString();
             user.Gender = dgvMember.Rows[row].Cells[4].Value.ToString();
             user.Phone = dgvMember.Rows[row].Cells[6].Value.ToString();
-            var formMemberEdit = new FormMemberEdit("EDIT",user.Id,user.FullName,user.Gender,user.Address,user.Phone);
+            var formMemberEdit = new FormMemberEdit("EDIT",user.Id,user.FullName,
+                user.Gender,user.Address,user.Phone);
             formMemberEdit.ShowDialog();
             FormRoomInfor_Load(sender, e);
         }
@@ -202,6 +204,31 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             var formBillInfor = new FormBillInfor(billId);
             formBillInfor.ShowDialog();
             FormRoomInfor_Load(sender, e);
+        }
+
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAddMember_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Thêm người thuê", btnAddMember);
+        }
+
+        private void btnUpdateBill_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Lập hóa đơn", btnUpdateBill);
+        }
+
+        private void btnUpdateRoom_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Cập nhật phòng", btnUpdateRoom);
         }
     }
 }

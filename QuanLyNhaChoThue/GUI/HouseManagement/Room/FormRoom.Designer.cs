@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHelp = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAccountSetting = new System.Windows.Forms.Button();
@@ -44,15 +43,20 @@
             this.uC_Home1 = new QuanLyNhaChoThue.GUI.Home.UC_Home();
             this.uC_ManageAccount1 = new QuanLyNhaChoThue.GUI.AccountSetting.UC_ManageAccount();
             this.uC_RoomManager1 = new QuanLyNhaChoThue.GUI.HouseManagement.Room.UC_RoomManager();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelTitle.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(33)))), ((int)(((byte)(35)))));
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnHelp);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnAccountSetting);
@@ -73,7 +77,7 @@
             this.btnHelp.ForeColor = System.Drawing.Color.White;
             this.btnHelp.Image = global::QuanLyNhaChoThue.Properties.Resources.help_25px;
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(8, 262);
+            this.btnHelp.Location = new System.Drawing.Point(8, 316);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(215, 54);
             this.btnHelp.TabIndex = 4;
@@ -82,21 +86,10 @@
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 31);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "QUẢN LÝ NHÀ";
-            // 
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
-            this.SidePanel.Location = new System.Drawing.Point(0, 94);
+            this.SidePanel.Location = new System.Drawing.Point(0, 149);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(8, 54);
             this.SidePanel.TabIndex = 2;
@@ -134,7 +127,7 @@
             this.btnAccountSetting.ForeColor = System.Drawing.Color.White;
             this.btnAccountSetting.Image = global::QuanLyNhaChoThue.Properties.Resources.user_settings_25px;
             this.btnAccountSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccountSetting.Location = new System.Drawing.Point(8, 206);
+            this.btnAccountSetting.Location = new System.Drawing.Point(8, 260);
             this.btnAccountSetting.Name = "btnAccountSetting";
             this.btnAccountSetting.Size = new System.Drawing.Size(215, 54);
             this.btnAccountSetting.TabIndex = 2;
@@ -154,7 +147,7 @@
             this.btnHouseManagement.ForeColor = System.Drawing.Color.White;
             this.btnHouseManagement.Image = global::QuanLyNhaChoThue.Properties.Resources.business_building_25px;
             this.btnHouseManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHouseManagement.Location = new System.Drawing.Point(8, 150);
+            this.btnHouseManagement.Location = new System.Drawing.Point(8, 204);
             this.btnHouseManagement.Name = "btnHouseManagement";
             this.btnHouseManagement.Size = new System.Drawing.Size(215, 54);
             this.btnHouseManagement.TabIndex = 1;
@@ -174,7 +167,7 @@
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = global::QuanLyNhaChoThue.Properties.Resources.windows_client_25px;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(8, 94);
+            this.btnHome.Location = new System.Drawing.Point(8, 148);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(215, 54);
             this.btnHome.TabIndex = 0;
@@ -277,6 +270,40 @@
             this.uC_RoomManager1.Size = new System.Drawing.Size(1004, 511);
             this.uC_RoomManager1.TabIndex = 6;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(223, 132);
+            this.panel3.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::QuanLyNhaChoThue.Properties.Resources.bmc_256x256_white;
+            this.pictureBox1.Location = new System.Drawing.Point(72, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(11, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(206, 31);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "QUẢN LÝ NHÀ";
+            // 
             // FormRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,8 +321,10 @@
             this.Text = "FormRoom";
             this.Load += new System.EventHandler(this.FormRoom_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panelTitle.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -304,7 +333,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnAccountSetting;
@@ -318,5 +346,8 @@
         private Home.UC_Home uC_Home1;
         private AccountSetting.UC_ManageAccount uC_ManageAccount1;
         private UC_RoomManager uC_RoomManager1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

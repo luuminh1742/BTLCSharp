@@ -56,7 +56,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
             }
             else
             {
-                lbTitle.Text = "Thên nhà";
+                lbTitle.Text = "Thêm nhà";
                 btnModify.Text = "Thêm nhà";
             }
 

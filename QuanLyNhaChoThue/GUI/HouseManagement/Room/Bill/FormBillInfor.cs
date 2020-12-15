@@ -104,5 +104,16 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill
                 }
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnPrintBill_Click(object sender, EventArgs e)
+        {
+            PrintDialog dlg = new PrintDialog(); //Khởi tạo đối tượng PrintDialog
+            dlg.ShowDialog(); //Hiển thị hộp thoại PrintDialog
+        }
     }
 }

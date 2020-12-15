@@ -103,6 +103,16 @@ namespace QuanLyNhaChoThue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_25px {
+            get {
+                object obj = ResourceManager.GetObject("back_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bg_bgn3 {
             get {
                 object obj = ResourceManager.GetObject("bg_bgn3", resourceCulture);
@@ -173,6 +183,16 @@ namespace QuanLyNhaChoThue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bmc_256x256_white {
+            get {
+                object obj = ResourceManager.GetObject("bmc-256x256-white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap business_building_25px {
             get {
                 object obj = ResourceManager.GetObject("business_building_25px", resourceCulture);
@@ -196,6 +216,16 @@ namespace QuanLyNhaChoThue.Properties {
         internal static System.Drawing.Bitmap delete_25px {
             get {
                 object obj = ResourceManager.GetObject("delete_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_25px_black {
+            get {
+                object obj = ResourceManager.GetObject("delete_25px_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

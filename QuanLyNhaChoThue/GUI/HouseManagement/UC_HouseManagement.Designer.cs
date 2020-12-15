@@ -34,6 +34,7 @@
             this.lvHouse = new System.Windows.Forms.ListView();
             this.imageListHouse = new System.Windows.Forms.ImageList(this.components);
             this.btnAddHouse = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +60,6 @@
             this.lvHouse.Size = new System.Drawing.Size(599, 350);
             this.lvHouse.TabIndex = 2;
             this.lvHouse.UseCompatibleStateImageBehavior = false;
-            this.lvHouse.SelectedIndexChanged += new System.EventHandler(this.lvHouse_SelectedIndexChanged);
             this.lvHouse.DoubleClick += new System.EventHandler(this.lvHouse_DoubleClick);
             // 
             // imageListHouse
@@ -79,6 +79,7 @@
             this.btnAddHouse.TabIndex = 3;
             this.btnAddHouse.UseVisualStyleBackColor = true;
             this.btnAddHouse.Click += new System.EventHandler(this.btnAddHouse_Click);
+            this.btnAddHouse.MouseHover += new System.EventHandler(this.btnAddHouse_MouseHover);
             // 
             // UC_HouseManagement
             // 
@@ -102,5 +103,6 @@
         private System.Windows.Forms.ListView lvHouse;
         private System.Windows.Forms.ImageList imageListHouse;
         private System.Windows.Forms.Button btnAddHouse;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

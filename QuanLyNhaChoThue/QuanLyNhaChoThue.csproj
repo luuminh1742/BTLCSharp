@@ -246,6 +246,7 @@
     <None Include="Image\edit_property_25px.png" />
     <None Include="Image\add_user_25px.png" />
     <None Include="Image\bg_bgn3.png" />
+    <None Include="Image\back_25px.png" />
     <Content Include="Image\bg_btn.png" />
     <None Include="Image\gb_btn1.png" />
     <None Include="Image\bg_btn2.png" />
@@ -256,6 +257,8 @@
     <None Include="Image\exit_50px.png" />
     <None Include="Image\exit_30px.png" />
     <None Include="Image\exit_25px.png" />
+    <None Include="Image\delete_25px_black.png" />
+    <None Include="Image\bmc-256x256-white.png" />
     <Content Include="Image\icons8_home_50.png" />
     <None Include="Image\icon_trang_chu_32px.png" />
     <None Include="Image\icon_trang-chu_checked_32px.png" />

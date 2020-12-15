@@ -41,6 +41,13 @@ namespace QuanLyNhaChoThue.GUI
                     this.WindowState = FormWindowState.Normal;
                 }
             }
+            else
+            {
+                SidePanel.Height = btnHome.Height;
+                SidePanel.Top = btnHome.Top;
+                uC_Home1.BringToFront();
+            }
+            
         }
 
         private void btnHome_Click(object sender, EventArgs e)

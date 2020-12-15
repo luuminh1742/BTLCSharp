@@ -17,11 +17,6 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
             InitializeComponent();
         }
 
-        private void pctAddHouse_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void UC_HouseManagement_Load(object sender, EventArgs e)
         {
             lvHouse.Clear();
@@ -32,7 +27,6 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
             }
            
         }
-
         public static int houseId = 0;
         private void ShowFormRoom()
         {
@@ -52,16 +46,17 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
 
         }
 
-        private void lvHouse_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAddHouse_Click(object sender, EventArgs e)
         {
             var formEditHouse = new FormHouseEdit("ADD", 0, "", "", "");
             formEditHouse.ShowDialog();
             UC_HouseManagement_Load(sender, e);
+        }
+
+        private void btnAddHouse_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Thêm nhà", btnAddHouse);
         }
     }
 }

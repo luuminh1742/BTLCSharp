@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,6 +38,7 @@
             this.dgvRoom = new System.Windows.Forms.DataGridView();
             this.btnAddRoom = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHouseInfor)).BeginInit();
@@ -144,6 +146,7 @@
             this.btnAddRoom.TabIndex = 2;
             this.btnAddRoom.UseVisualStyleBackColor = true;
             this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
+            this.btnAddRoom.MouseHover += new System.EventHandler(this.btnAddRoom_MouseHover);
             // 
             // label3
             // 
@@ -189,5 +192,6 @@
         private System.Windows.Forms.Button btnAddRoom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvRoom;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

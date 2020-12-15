@@ -52,7 +52,6 @@ namespace QuanLyNhaChoThue.GUI
                     Thread thread = new Thread(new ThreadStart(ShowFormMain)); //Tạo luồng mới
                     thread.Start(); //Khởi chạy luồng
                     this.Close(); //đóng Form hiện tại. 
-                    
                 }
                 else
                 {

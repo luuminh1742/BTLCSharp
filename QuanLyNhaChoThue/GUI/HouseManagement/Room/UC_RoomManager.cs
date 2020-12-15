@@ -88,5 +88,10 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             LoadListRoom();
 
         }
+
+        private void btnAddRoom_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Thêm phòng", btnAddRoom);
+        }
     }
 }
