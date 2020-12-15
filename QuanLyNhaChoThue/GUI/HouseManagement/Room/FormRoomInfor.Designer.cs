@@ -47,8 +47,10 @@
             this.dgvMember = new System.Windows.Forms.DataGridView();
             this.lbMember = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -58,6 +60,7 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
             this.panelTitle.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -75,12 +78,12 @@
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.75484F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.80078F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.80079F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.44437F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(832, 654);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(832, 683);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -89,7 +92,7 @@
             this.panel1.Controls.Add(this.lbInfor);
             this.panel1.Controls.Add(this.btnUpdateRoom);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 38);
+            this.panel1.Location = new System.Drawing.Point(3, 43);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
             this.panel1.Size = new System.Drawing.Size(826, 45);
@@ -139,10 +142,10 @@
             this.panel3.Controls.Add(this.dgvBill);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 461);
+            this.panel3.Location = new System.Drawing.Point(3, 481);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel3.Size = new System.Drawing.Size(826, 190);
+            this.panel3.Size = new System.Drawing.Size(826, 199);
             this.panel3.TabIndex = 2;
             // 
             // dgvBill
@@ -156,7 +159,7 @@
             this.dgvBill.Location = new System.Drawing.Point(10, 43);
             this.dgvBill.Name = "dgvBill";
             this.dgvBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBill.Size = new System.Drawing.Size(803, 134);
+            this.dgvBill.Size = new System.Drawing.Size(803, 143);
             this.dgvBill.TabIndex = 2;
             this.dgvBill.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_CellDoubleClick);
             // 
@@ -176,10 +179,10 @@
             this.panel4.Controls.Add(this.lvMoneyTypes);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 218);
+            this.panel4.Location = new System.Drawing.Point(3, 228);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
-            this.panel4.Size = new System.Drawing.Size(826, 237);
+            this.panel4.Size = new System.Drawing.Size(826, 247);
             this.panel4.TabIndex = 3;
             // 
             // lvMoneyTypes
@@ -195,7 +198,7 @@
             this.lvMoneyTypes.HideSelection = false;
             this.lvMoneyTypes.Location = new System.Drawing.Point(10, 42);
             this.lvMoneyTypes.Name = "lvMoneyTypes";
-            this.lvMoneyTypes.Size = new System.Drawing.Size(806, 182);
+            this.lvMoneyTypes.Size = new System.Drawing.Size(806, 192);
             this.lvMoneyTypes.TabIndex = 2;
             this.lvMoneyTypes.UseCompatibleStateImageBehavior = false;
             this.lvMoneyTypes.View = System.Windows.Forms.View.Details;
@@ -227,10 +230,10 @@
             this.panel5.Controls.Add(this.dgvMember);
             this.panel5.Controls.Add(this.lbMember);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 89);
+            this.panel5.Location = new System.Drawing.Point(3, 94);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(10);
-            this.panel5.Size = new System.Drawing.Size(826, 123);
+            this.panel5.Size = new System.Drawing.Size(826, 128);
             this.panel5.TabIndex = 4;
             // 
             // btnAddMember
@@ -257,7 +260,7 @@
             this.dgvMember.Location = new System.Drawing.Point(10, 43);
             this.dgvMember.Name = "dgvMember";
             this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMember.Size = new System.Drawing.Size(806, 67);
+            this.dgvMember.Size = new System.Drawing.Size(806, 72);
             this.dgvMember.TabIndex = 2;
             this.dgvMember.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellDoubleClick);
             // 
@@ -274,30 +277,27 @@
             // 
             // panelTitle
             // 
-            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
-            this.panelTitle.Controls.Add(this.btnClose);
-            this.panelTitle.Controls.Add(this.label3);
+            this.panelTitle.BackColor = System.Drawing.Color.White;
+            this.panelTitle.Controls.Add(this.panel6);
+            this.panelTitle.Controls.Add(this.panel2);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Margin = new System.Windows.Forms.Padding(0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(832, 35);
+            this.panelTitle.Size = new System.Drawing.Size(832, 40);
             this.panelTitle.TabIndex = 5;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
-            // btnClose
+            // panel6
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::QuanLyNhaChoThue.Properties.Resources.delete_25px_black;
-            this.btnClose.Location = new System.Drawing.Point(791, 5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 25);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.btnClose);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 5);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(832, 35);
+            this.panel6.TabIndex = 3;
+            this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseDown);
             // 
             // label3
             // 
@@ -305,18 +305,44 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(300, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(193, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Thông tin về phòng";
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label3_MouseDown);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::QuanLyNhaChoThue.Properties.Resources.delete_25px;
+            this.btnClose.Location = new System.Drawing.Point(787, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(45, 35);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(832, 5);
+            this.panel2.TabIndex = 2;
             // 
             // FormRoomInfor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 654);
+            this.ClientSize = new System.Drawing.Size(832, 683);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(832, 654);
@@ -336,7 +362,8 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).EndInit();
             this.panelTitle.ResumeLayout(false);
-            this.panelTitle.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -361,8 +388,10 @@
         private System.Windows.Forms.DataGridView dgvMember;
         private System.Windows.Forms.Button btnAddMember;
         private System.Windows.Forms.Panel panelTitle;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
     }
 }

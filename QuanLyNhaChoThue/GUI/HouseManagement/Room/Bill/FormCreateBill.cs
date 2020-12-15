@@ -70,5 +70,10 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
         {
             MovePanel.MouseDown(this);
         }
+
+        private void label4_MouseDown(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
+        }
     }
 }

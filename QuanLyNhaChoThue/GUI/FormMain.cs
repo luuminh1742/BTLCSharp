@@ -55,6 +55,7 @@ namespace QuanLyNhaChoThue.GUI
             SidePanel.Height = btnHome.Height;
             SidePanel.Top = btnHome.Top;
             uC_Home1.BringToFront();
+
         }
 
         private void btnHouseManagement_Click(object sender, EventArgs e)

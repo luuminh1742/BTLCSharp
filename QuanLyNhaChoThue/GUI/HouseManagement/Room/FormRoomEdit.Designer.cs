@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRoomEdit));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,34 +61,12 @@
             this.label20 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
-            this.panel1.Controls.Add(this.lbTitle);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(671, 35);
-            this.panel1.TabIndex = 0;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // lbTitle
-            // 
-            this.lbTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbTitle.AutoSize = true;
-            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(241, 5);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(159, 24);
-            this.lbTitle.TabIndex = 0;
-            this.lbTitle.Text = "Cập nhật phòng";
             // 
             // label2
             // 
@@ -185,7 +161,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
@@ -270,7 +246,7 @@
             // 
             this.txtRoomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomName.ForeColor = System.Drawing.Color.Black;
-            this.txtRoomName.Location = new System.Drawing.Point(152, 3);
+            this.txtRoomName.Location = new System.Drawing.Point(151, 3);
             this.txtRoomName.Name = "txtRoomName";
             this.txtRoomName.Size = new System.Drawing.Size(292, 26);
             this.txtRoomName.TabIndex = 0;
@@ -280,7 +256,7 @@
             // 
             this.txtRoomMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomMoney.ForeColor = System.Drawing.Color.Black;
-            this.txtRoomMoney.Location = new System.Drawing.Point(152, 38);
+            this.txtRoomMoney.Location = new System.Drawing.Point(151, 38);
             this.txtRoomMoney.Name = "txtRoomMoney";
             this.txtRoomMoney.Size = new System.Drawing.Size(292, 26);
             this.txtRoomMoney.TabIndex = 1;
@@ -290,7 +266,7 @@
             // 
             this.txtElectricMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtElectricMoney.ForeColor = System.Drawing.Color.Black;
-            this.txtElectricMoney.Location = new System.Drawing.Point(152, 73);
+            this.txtElectricMoney.Location = new System.Drawing.Point(151, 73);
             this.txtElectricMoney.Name = "txtElectricMoney";
             this.txtElectricMoney.Size = new System.Drawing.Size(292, 26);
             this.txtElectricMoney.TabIndex = 2;
@@ -300,7 +276,7 @@
             // 
             this.txtLastElectricNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastElectricNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtLastElectricNumber.Location = new System.Drawing.Point(152, 108);
+            this.txtLastElectricNumber.Location = new System.Drawing.Point(151, 108);
             this.txtLastElectricNumber.Name = "txtLastElectricNumber";
             this.txtLastElectricNumber.Size = new System.Drawing.Size(292, 26);
             this.txtLastElectricNumber.TabIndex = 3;
@@ -310,7 +286,7 @@
             // 
             this.txtWaterMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWaterMoney.ForeColor = System.Drawing.Color.Black;
-            this.txtWaterMoney.Location = new System.Drawing.Point(152, 143);
+            this.txtWaterMoney.Location = new System.Drawing.Point(151, 143);
             this.txtWaterMoney.Name = "txtWaterMoney";
             this.txtWaterMoney.Size = new System.Drawing.Size(292, 26);
             this.txtWaterMoney.TabIndex = 4;
@@ -320,7 +296,7 @@
             // 
             this.txtLastWaterNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastWaterNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtLastWaterNumber.Location = new System.Drawing.Point(152, 213);
+            this.txtLastWaterNumber.Location = new System.Drawing.Point(151, 213);
             this.txtLastWaterNumber.Name = "txtLastWaterNumber";
             this.txtLastWaterNumber.Size = new System.Drawing.Size(292, 26);
             this.txtLastWaterNumber.TabIndex = 6;
@@ -330,7 +306,7 @@
             // 
             this.txtNetworkMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNetworkMoney.ForeColor = System.Drawing.Color.Black;
-            this.txtNetworkMoney.Location = new System.Drawing.Point(152, 283);
+            this.txtNetworkMoney.Location = new System.Drawing.Point(151, 283);
             this.txtNetworkMoney.Name = "txtNetworkMoney";
             this.txtNetworkMoney.Size = new System.Drawing.Size(292, 26);
             this.txtNetworkMoney.TabIndex = 8;
@@ -340,7 +316,7 @@
             // 
             this.txtOtherMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOtherMoney.ForeColor = System.Drawing.Color.Black;
-            this.txtOtherMoney.Location = new System.Drawing.Point(152, 318);
+            this.txtOtherMoney.Location = new System.Drawing.Point(151, 318);
             this.txtOtherMoney.Name = "txtOtherMoney";
             this.txtOtherMoney.Size = new System.Drawing.Size(292, 26);
             this.txtOtherMoney.TabIndex = 9;
@@ -350,7 +326,7 @@
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(152, 353);
+            this.txtDescription.Location = new System.Drawing.Point(151, 353);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(292, 84);
@@ -366,7 +342,7 @@
             "Theo phòng",
             "Theo số công tơ",
             "Miễn phí"});
-            this.cbbWaterMoneyType.Location = new System.Drawing.Point(152, 178);
+            this.cbbWaterMoneyType.Location = new System.Drawing.Point(151, 178);
             this.cbbWaterMoneyType.Name = "cbbWaterMoneyType";
             this.cbbWaterMoneyType.Size = new System.Drawing.Size(292, 28);
             this.cbbWaterMoneyType.TabIndex = 5;
@@ -381,7 +357,7 @@
             "Theo đầu người",
             "Theo phòng",
             "Miễn phí"});
-            this.cbbNetworkMoneyType.Location = new System.Drawing.Point(152, 248);
+            this.cbbNetworkMoneyType.Location = new System.Drawing.Point(151, 248);
             this.cbbNetworkMoneyType.Name = "cbbNetworkMoneyType";
             this.cbbNetworkMoneyType.Size = new System.Drawing.Size(292, 28);
             this.cbbNetworkMoneyType.TabIndex = 7;
@@ -392,7 +368,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(450, 35);
+            this.label13.Location = new System.Drawing.Point(449, 35);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(43, 20);
             this.label13.TabIndex = 3;
@@ -403,7 +379,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(450, 70);
+            this.label14.Location = new System.Drawing.Point(449, 70);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 20);
             this.label14.TabIndex = 11;
@@ -414,7 +390,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(450, 105);
+            this.label15.Location = new System.Drawing.Point(449, 105);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 20);
             this.label15.TabIndex = 11;
@@ -425,7 +401,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(450, 140);
+            this.label16.Location = new System.Drawing.Point(449, 140);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(43, 20);
             this.label16.TabIndex = 11;
@@ -436,7 +412,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(450, 210);
+            this.label17.Location = new System.Drawing.Point(449, 210);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(29, 20);
             this.label17.TabIndex = 11;
@@ -447,7 +423,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(450, 280);
+            this.label19.Location = new System.Drawing.Point(449, 280);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(43, 20);
             this.label19.TabIndex = 11;
@@ -458,7 +434,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(450, 315);
+            this.label20.Location = new System.Drawing.Point(449, 315);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(43, 20);
             this.label20.TabIndex = 11;
@@ -500,33 +476,66 @@
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(671, 5);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lbTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(0, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(671, 35);
+            this.panel1.TabIndex = 13;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            // 
+            // lbTitle
+            // 
+            this.lbTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.ForeColor = System.Drawing.Color.Black;
+            this.lbTitle.Location = new System.Drawing.Point(241, 5);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(159, 24);
+            this.lbTitle.TabIndex = 0;
+            this.lbTitle.Text = "Cập nhật phòng";
+            this.lbTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbTitle_MouseDown);
+            // 
             // FormRoomEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(671, 516);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormRoomEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRoomEdit";
             this.Load += new System.EventHandler(this.FormRoomEdit_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label2;
@@ -559,5 +568,8 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbTitle;
     }
 }

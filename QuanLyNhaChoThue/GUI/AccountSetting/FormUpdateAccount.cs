@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -63,6 +64,21 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
                 userDTO.Phone = phone;
                 userDTO.Gender = gender;
                 userDTO.Address = address;
+                Regex checkPhone = new Regex("^(0[2|3|6|8|9])+([0-9]{8})$");
+                Regex checkUserName = new Regex(" |, ");
+                if (checkUserName.IsMatch(username))
+                {
+                    MessageBox.Show("Tên đăng nhập không được chứa khoảng trắng hoặc dấu phẩy!", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (!checkPhone.IsMatch(phone))
+                {
+                    MessageBox.Show("Số điện thoại nhập không đúng định dạng!", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 if (userBll.UpdateAdmin(userDTO))
                 {
                     MessageBox.Show("Cập nhật thành công", "Thông báo",
@@ -74,13 +90,7 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 this.Close();
-
             }
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            MovePanel.MouseDown(this);
         }
 
         private void FormUpdateAccount_Load(object sender, EventArgs e)
@@ -98,6 +108,16 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
                 rbtFemale.Checked = true;
             }
             
+        }
+
+        private void panel1_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
         }
     }
 }

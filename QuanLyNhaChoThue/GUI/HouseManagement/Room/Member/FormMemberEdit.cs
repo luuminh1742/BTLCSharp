@@ -2,6 +2,7 @@
 using QuanLyNhaChoThue.DTO;
 using QuanLyNhaChoThue.Utils;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Member
@@ -92,6 +93,13 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Member
             userDTO.Phone = phone;
             userDTO.Address = address;
             userDTO.Gender = gender;
+            Regex checkPhone = new Regex("^(0[2|3|6|8|9])+([0-9]{8})$");
+            if (!checkPhone.IsMatch(phone))
+            {
+                MessageBox.Show("Số điện thoại nhập không đúng định dạng!", "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (userBll.Insert(userDTO))
             {
                 MessageBox.Show("Lưu thành công", "Thông báo",
@@ -139,10 +147,6 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Member
             this.Close();
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            MovePanel.MouseDown(this);
-        }
 
         private void btnDeleteMember_Click(object sender, EventArgs e)
         {
@@ -162,6 +166,16 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Member
                 }
                 
             }
+        }
+
+        private void panel1_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
+        }
+
+        private void lbTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
         }
     }
 }

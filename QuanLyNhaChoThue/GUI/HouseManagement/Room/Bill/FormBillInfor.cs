@@ -1,5 +1,6 @@
 ﻿using QuanLyNhaChoThue.BLL;
 using QuanLyNhaChoThue.DTO;
+using QuanLyNhaChoThue.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,7 +62,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill
             if (billDTO.Status)
             {
                 chkStatus.Text = "Đã đóng tiền nhà";
-                chkStatus.Visible = true;
+                chkStatus.Enabled = false;
             }
             else
             {
@@ -75,11 +76,6 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill
 
         private void chkStatus_CheckedChanged(object sender, EventArgs e)
         {
-            
-
-            
-            
-            //chkStatus.Checked = false;
             
         }
 
@@ -95,7 +91,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     chkStatus.Checked = true;
                     chkStatus.Text = "Đã đóng tiền nhà";
-                    chkStatus.Visible = true;
+                    chkStatus.Enabled = false;
                 }
                 else
                 {
@@ -114,6 +110,26 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill
         {
             PrintDialog dlg = new PrintDialog(); //Khởi tạo đối tượng PrintDialog
             dlg.ShowDialog(); //Hiển thị hộp thoại PrintDialog
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
+        }
+
+        private void btnCancel_MouseHover(object sender, EventArgs e)
+        {
+            btnCancel.BackColor = Color.Red;
+        }
+
+        private void btnCancel_MouseLeave(object sender, EventArgs e)
+        {
+            btnCancel.BackColor = Color.White;
+        }
+
+        private void label6_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnCancel.BackColor = Color.White;
         }
     }
 }

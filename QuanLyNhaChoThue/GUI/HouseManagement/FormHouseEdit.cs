@@ -136,7 +136,12 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement
             }
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void panel1_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
+        }
+
+        private void lbTitle_MouseDown(object sender, MouseEventArgs e)
         {
             MovePanel.MouseDown(this);
         }

@@ -4,6 +4,7 @@ using QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill;
 using QuanLyNhaChoThue.GUI.HouseManagement.Room.Member;
 using QuanLyNhaChoThue.Utils;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
@@ -27,6 +28,14 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
         private void FormRoomInfor_Load(object sender, EventArgs e)
         {
             roomDTO = roomBll.findOne(roomDTO.Id);
+            if(roomDTO.Member == 0)
+            {
+                btnUpdateBill.Enabled = false;
+            }
+            else
+            {
+                btnUpdateBill.Enabled = true;
+            }
             lbInfor.Text = "Phòng : " + roomDTO.RoomName;
             lbMember.Text = "Thành viên : " + roomDTO.Member;
             LoadMember(roomDTO.Id);
@@ -37,23 +46,6 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
         {
             dgvBill.DataSource = null;
             dgvBill.DataSource = billBll.FindByRoomId(roomDTO.Id);
-            /*Id Integer Identity ,
-            RoomId Integer NOT NULL,
-            MemberName Nvarchar(255) NULL,
-            RoomMoney Integer NULL,
-            ElectricMoney Integer NULL,
-            WaterMoney Integer NULL,
-            NetworkMoney Integer NULL,
-            OtherMoney Integer NULL,
-            LastElectricNumber Integer NULL,
-            ElectricNumber Integer NULL,
-            LastWaterNumber Integer NULL,
-            WaterNumber Integer NULL,
-            TotalMoney Integer NULL,
-            ModifiedBy Nvarchar(100) NULL,
-            CreatedDate Datetime NULL,
-            ModifiedDate Datetime NULL,
-            Status Bit NULL,*/
             dgvBill.Columns["Id"].Visible = false;
             dgvBill.Columns["RoomId"].Visible = false;
             dgvBill.Columns["MemberName"].Visible = false;
@@ -72,20 +64,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             dgvBill.Columns[14].HeaderCell.Value = "Ngày tạo";
             dgvBill.Columns[15].HeaderCell.Value = "Ngày cập nhật";
             dgvBill.Columns[16].HeaderCell.Value = "Trạng thái";
-            /*for (int i = 0; i < dgvBill.Rows.Count-1; i++)
-            {
-                if (dgvBill.Rows[i].Cells[16].Value.Equals(true))
-                {
-                    dgvBill.Rows[i].Cells[16].Value = "Đã đóng tiền nhà";
-                }
-                else
-                {
-                    dgvBill.Rows[i].Cells[16].Value = "Chưa đóng tiền nhà";
-                }
-
-            }*/
-
-
+           
         }
         private void LoadMember(int roomId)
         {
@@ -192,9 +171,9 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
 
         private void btnUpdateBill_Click(object sender, EventArgs e)
         {
-
             var formCreateBill = new FormCreateBill(roomDTO.Id);
             formCreateBill.ShowDialog();
+            FormRoomInfor_Load(sender, e);
         }
 
         private void dgvBill_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -229,6 +208,26 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
         private void btnUpdateRoom_MouseHover(object sender, EventArgs e)
         {
             toolTip1.Show("Cập nhật phòng", btnUpdateRoom);
+        }
+
+        private void btnClose_MouseHover(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Red;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.White;
+        }
+
+        private void label3_MouseDown(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
+        }
+
+        private void panel6_MouseDown(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
         }
     }
 }

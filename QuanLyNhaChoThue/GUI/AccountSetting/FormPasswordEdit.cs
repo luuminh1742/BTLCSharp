@@ -2,6 +2,7 @@
 using QuanLyNhaChoThue.DTO;
 using QuanLyNhaChoThue.Utils;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace QuanLyNhaChoThue.GUI.AccountSetting
@@ -39,11 +40,20 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
                 string confirmPass = txtConfirmPass.Text;
                 if (pass.Equals(confirmPass))
                 {
+                    Regex checkPasword = new Regex(@"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!% *#?&])[A-Za-z\d@$!%*#?&]{8,}$");
+                    if (!checkPasword.IsMatch(pass))
+                    {
+                        MessageBox.Show("Mật khẩu tối thiểu tám ký tự, ít nhất một chữ cái, một số và một ký tự đặc biệt.",
+                            "Lỗi",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
                     if (userBll.UpdatePassword(id, pass))
                     {
                         MessageBox.Show("Cập nhật mật khẩu thành công! ", "Thông báo",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
+
                     }
                     else
                     {
@@ -66,7 +76,14 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
             txtConfirmPass.PasswordChar = '*';
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        
+
+        private void panel1_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            MovePanel.MouseDown(this);
+        }
+
+        private void label3_MouseDown(object sender, MouseEventArgs e)
         {
             MovePanel.MouseDown(this);
         }
