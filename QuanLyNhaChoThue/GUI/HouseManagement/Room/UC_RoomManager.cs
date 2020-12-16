@@ -85,8 +85,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             string description = dgvHouseInfor.Rows[row].Cells[3].Value.ToString();
             var formHouseEdit = new FormHouseEdit("EDIT",houseId,houseName,address,description);
             formHouseEdit.ShowDialog();
-            LoadListRoom();
-
+            UC_RoomManager_Load(sender, e);
         }
 
         private void btnAddRoom_MouseHover(object sender, EventArgs e)
