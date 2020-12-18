@@ -2,7 +2,6 @@
 using QuanLyNhaChoThue.DTO;
 using QuanLyNhaChoThue.Utils;
 using System;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -42,7 +41,7 @@ namespace QuanLyNhaChoThue.GUI
                 UserDTO result = userBll.FindOne(userName, pass);
                 if(result == null)
                 {
-                    MessageBox.Show("Đăng nhập thất bại ! ", "Thông báo",
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai ! ", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
@@ -55,7 +54,7 @@ namespace QuanLyNhaChoThue.GUI
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại ! ", "Thông báo",
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai ! ", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -66,15 +65,7 @@ namespace QuanLyNhaChoThue.GUI
             this.Close();
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
+       
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {

@@ -55,34 +55,6 @@ namespace QuanLyNhaChoThue.DAL
             }
         }
 
-        public bool Login(string sql, params dynamic[] parameters)
-        {
-            SqlConnection conn = GetDBConnection();
-            try
-            {
-                if (conn.State == ConnectionState.Closed)
-                    conn.Open();
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                setParameters(cmd, parameters);
-                DataTable table = new DataTable();
-                table.Load(reader);
-                if (table != null)
-                {
-                    return true;
-                }
-                return false;
-            }
-            catch (SqlException)
-            {
-                return false;
-            }
-            finally
-            {
-                if (conn.State == ConnectionState.Open)
-                    conn.Close();
-            }
-        }
 
         public bool ExecuteQuery(string sql, params dynamic[] parameters)
         {

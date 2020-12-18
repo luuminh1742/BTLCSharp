@@ -14,12 +14,7 @@ namespace QuanLyNhaChoThue.BLL
         UserBLL userBll = new UserBLL();
         public bool Insert(BillDTO billDTO)
         {
-            //List<UserDTO> listMember = userBll.FindMemBer(billDTO.RoomId);
             billDTO.MemberName = "";
-            /*foreach(var member in listMember)
-            {
-                billDTO.MemberName = member.FullName + " , ";
-            }*/
             RoomDTO roomDTO = new RoomDTO();
             roomDTO = roomBll.findOne(billDTO.RoomId);
             billDTO.RoomMoney = roomDTO.RoomMoney;

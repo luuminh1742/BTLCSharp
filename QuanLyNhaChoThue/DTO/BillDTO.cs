@@ -2,8 +2,9 @@
 
 namespace QuanLyNhaChoThue.DTO
 {
-    class BillDTO:AbstractDTO
+    class BillDTO
     {
+        public int Id { get; set; }
         public int RoomId { get; set; }
         public string MemberName { get; set; }
         public int RoomMoney { get; set; }

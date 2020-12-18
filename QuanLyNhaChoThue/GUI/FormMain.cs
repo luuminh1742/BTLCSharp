@@ -143,7 +143,7 @@ namespace QuanLyNhaChoThue.GUI
         {
             SidePanel.Height = btnHelp.Height;
             SidePanel.Top = btnHelp.Top;
-            ProcessStartInfo sInfo = new ProcessStartInfo("http://google.com/");
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://docs.microsoft.com/en-us/dotnet/csharp/");
             Process.Start(sInfo);
         }
 

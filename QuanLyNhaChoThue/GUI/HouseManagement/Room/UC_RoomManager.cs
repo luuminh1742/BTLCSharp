@@ -6,8 +6,6 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
 {
     public partial class UC_RoomManager : UserControl
     {
-        /*HouseBLL houseBll = new HouseBLL();
-        RoomBLL roomBll = new RoomBLL();*/
         public int houseId;
         public UC_RoomManager()
         {

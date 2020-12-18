@@ -1,7 +1,5 @@
 ﻿using QuanLyNhaChoThue.DAL;
 using QuanLyNhaChoThue.DTO;
-using QuanLyNhaChoThue.Utils;
-using System;
 using System.Collections.Generic;
 using System.Data;
 

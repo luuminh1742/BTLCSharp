@@ -1,9 +1,8 @@
-﻿using System;
-
-namespace QuanLyNhaChoThue.DTO
+﻿namespace QuanLyNhaChoThue.DTO
 {
-    class RoomDTO:AbstractDTO
+    class RoomDTO
     {
+        public int Id { get; set; }
         public int HouseId { get; set; }
         public string RoomName { get; set; }
         public int RoomMoney { get; set; }
