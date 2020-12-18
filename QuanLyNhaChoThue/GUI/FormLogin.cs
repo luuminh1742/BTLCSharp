@@ -45,18 +45,9 @@ namespace QuanLyNhaChoThue.GUI
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-
-                if(result.UserName.Equals(userName) && result.Password.Equals(pass))
-                {
-                    Thread thread = new Thread(new ThreadStart(ShowFormMain)); //Tạo luồng mới
-                    thread.Start(); //Khởi chạy luồng
-                    this.Close(); //đóng Form hiện tại. 
-                }
-                else
-                {
-                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai ! ", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                Thread thread = new Thread(new ThreadStart(ShowFormMain)); //Tạo luồng mới
+                thread.Start(); //Khởi chạy luồng
+                this.Close(); //đóng Form hiện tại. 
             }
         }
 
