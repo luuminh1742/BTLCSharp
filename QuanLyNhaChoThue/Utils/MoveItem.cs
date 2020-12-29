@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaChoThue.Utils
 {
-    class MovePanel
+    class MoveItem
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

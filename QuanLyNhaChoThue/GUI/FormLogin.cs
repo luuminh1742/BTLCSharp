@@ -60,7 +60,7 @@ namespace QuanLyNhaChoThue.GUI
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            MovePanel.MouseDown(this);
+            MoveItem.MouseDown(this);
         }
     }
 }

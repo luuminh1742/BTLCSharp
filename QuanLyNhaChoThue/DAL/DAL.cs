@@ -7,7 +7,7 @@ namespace QuanLyNhaChoThue.DAL
     {
         private SqlConnection GetDBConnection()
         {
-            string connString = @"Data Source=AnhMinh\SQLEXPRESS;Initial Catalog=QuanLyNhaThue;Integrated Security=True";
+            string connString = @"Data Source=DESKTOP-AF97049\SQLEXPRESS;Initial Catalog=QuanLyNhaThue;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connString);
             return conn;
         }

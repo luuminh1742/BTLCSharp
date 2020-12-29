@@ -85,7 +85,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
 
         private void panelTitle_MouseDown(object sender, MouseEventArgs e)
         {
-            MovePanel.MouseDown(this);
+            MoveItem.MouseDown(this);
         }
 
         private void btnClose_MouseHover(object sender, EventArgs e)

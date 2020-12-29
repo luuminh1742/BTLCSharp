@@ -108,7 +108,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
-            MovePanel.MouseDown(this);
+            MoveItem.MouseDown(this);
         }
 
         private void btnCancel_MouseHover(object sender, EventArgs e)
@@ -124,6 +124,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill
         private void label6_MouseDown(object sender, MouseEventArgs e)
         {
             btnCancel.BackColor = Color.White;
+            MoveItem.MouseDown(this);
         }
     }
 }

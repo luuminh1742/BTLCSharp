@@ -187,7 +187,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
 
         private void panelTitle_MouseDown(object sender, MouseEventArgs e)
         {
-            MovePanel.MouseDown(this);
+            MoveItem.MouseDown(this);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -222,12 +222,12 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
 
         private void label3_MouseDown(object sender, MouseEventArgs e)
         {
-            MovePanel.MouseDown(this);
+            MoveItem.MouseDown(this);
         }
 
         private void panel6_MouseDown(object sender, MouseEventArgs e)
         {
-            MovePanel.MouseDown(this);
+            MoveItem.MouseDown(this);
         }
     }
 }

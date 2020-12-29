@@ -105,12 +105,12 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
 
         private void panel1_MouseDown_1(object sender, MouseEventArgs e)
         {
-            MovePanel.MouseDown(this);
+            MoveItem.MouseDown(this);
         }
 
         private void label1_MouseDown(object sender, MouseEventArgs e)
         {
-            MovePanel.MouseDown(this);
+            MoveItem.MouseDown(this);
         }
     }
 }
