@@ -64,6 +64,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room.Bill
             }
             lbCreateDate.Text = billDTO.CreatedDate.ToString();
             lbCreateBy.Text = billDTO.ModifiedBy;
+            lbMember.Text = billDTO.MemberName;
             RoomDTO roomDTO = roomBLL.findOne(billDTO.RoomId);
             lbRoomName.Text = roomDTO.RoomName;
         }

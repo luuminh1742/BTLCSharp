@@ -29,6 +29,13 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             dgvHouseInfor.Columns[1].HeaderCell.Value = "Tên nhà";
             dgvHouseInfor.Columns[2].HeaderCell.Value = "Địa chỉ";
             dgvHouseInfor.Columns[3].HeaderCell.Value = "Mô tả";
+
+            dgvHouseInfor.AllowUserToAddRows = false;
+            dgvRoom.AllowUserToAddRows = false;
+
+            dgvHouseInfor.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvHouseInfor.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvHouseInfor.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
         private void LoadListRoom()

@@ -78,12 +78,12 @@
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.75484F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.80079F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.44437F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(832, 683);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1109, 841);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -92,10 +92,11 @@
             this.panel1.Controls.Add(this.lbInfor);
             this.panel1.Controls.Add(this.btnUpdateRoom);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 43);
+            this.panel1.Location = new System.Drawing.Point(4, 53);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(826, 45);
+            this.panel1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.panel1.Size = new System.Drawing.Size(1101, 55);
             this.panel1.TabIndex = 1;
             // 
             // btnUpdateBill
@@ -104,9 +105,10 @@
             this.btnUpdateBill.FlatAppearance.BorderSize = 0;
             this.btnUpdateBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateBill.Image = global::QuanLyNhaChoThue.Properties.Resources.money_25px;
-            this.btnUpdateBill.Location = new System.Drawing.Point(716, 10);
+            this.btnUpdateBill.Location = new System.Drawing.Point(954, 12);
+            this.btnUpdateBill.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateBill.Name = "btnUpdateBill";
-            this.btnUpdateBill.Size = new System.Drawing.Size(50, 25);
+            this.btnUpdateBill.Size = new System.Drawing.Size(67, 31);
             this.btnUpdateBill.TabIndex = 1;
             this.btnUpdateBill.UseVisualStyleBackColor = true;
             this.btnUpdateBill.Click += new System.EventHandler(this.btnUpdateBill_Click);
@@ -117,9 +119,10 @@
             this.lbInfor.AutoSize = true;
             this.lbInfor.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbInfor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInfor.Location = new System.Drawing.Point(10, 10);
+            this.lbInfor.Location = new System.Drawing.Point(13, 12);
+            this.lbInfor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbInfor.Name = "lbInfor";
-            this.lbInfor.Size = new System.Drawing.Size(75, 20);
+            this.lbInfor.Size = new System.Drawing.Size(94, 25);
             this.lbInfor.TabIndex = 0;
             this.lbInfor.Text = "Thông tin";
             // 
@@ -129,9 +132,10 @@
             this.btnUpdateRoom.FlatAppearance.BorderSize = 0;
             this.btnUpdateRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateRoom.Image = global::QuanLyNhaChoThue.Properties.Resources.edit_property_25px;
-            this.btnUpdateRoom.Location = new System.Drawing.Point(766, 10);
+            this.btnUpdateRoom.Location = new System.Drawing.Point(1021, 12);
+            this.btnUpdateRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateRoom.Name = "btnUpdateRoom";
-            this.btnUpdateRoom.Size = new System.Drawing.Size(50, 25);
+            this.btnUpdateRoom.Size = new System.Drawing.Size(67, 31);
             this.btnUpdateRoom.TabIndex = 0;
             this.btnUpdateRoom.UseVisualStyleBackColor = true;
             this.btnUpdateRoom.Click += new System.EventHandler(this.btnUpdateRoom_Click);
@@ -142,10 +146,11 @@
             this.panel3.Controls.Add(this.dgvBill);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 481);
+            this.panel3.Location = new System.Drawing.Point(4, 593);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel3.Size = new System.Drawing.Size(826, 199);
+            this.panel3.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.panel3.Size = new System.Drawing.Size(1101, 244);
             this.panel3.TabIndex = 2;
             // 
             // dgvBill
@@ -156,10 +161,12 @@
             this.dgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBill.BackgroundColor = System.Drawing.Color.White;
             this.dgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBill.Location = new System.Drawing.Point(10, 43);
+            this.dgvBill.Location = new System.Drawing.Point(13, 53);
+            this.dgvBill.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBill.Name = "dgvBill";
+            this.dgvBill.RowHeadersWidth = 51;
             this.dgvBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBill.Size = new System.Drawing.Size(803, 143);
+            this.dgvBill.Size = new System.Drawing.Size(1071, 175);
             this.dgvBill.TabIndex = 2;
             this.dgvBill.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_CellDoubleClick);
             // 
@@ -168,9 +175,10 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Location = new System.Drawing.Point(13, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.Size = new System.Drawing.Size(86, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Hóa đơn";
             // 
@@ -179,10 +187,11 @@
             this.panel4.Controls.Add(this.lvMoneyTypes);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 228);
+            this.panel4.Location = new System.Drawing.Point(4, 281);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(10);
-            this.panel4.Size = new System.Drawing.Size(826, 247);
+            this.panel4.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.panel4.Size = new System.Drawing.Size(1101, 304);
             this.panel4.TabIndex = 3;
             // 
             // lvMoneyTypes
@@ -196,9 +205,10 @@
             this.lvMoneyTypes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvMoneyTypes.FullRowSelect = true;
             this.lvMoneyTypes.HideSelection = false;
-            this.lvMoneyTypes.Location = new System.Drawing.Point(10, 42);
+            this.lvMoneyTypes.Location = new System.Drawing.Point(13, 52);
+            this.lvMoneyTypes.Margin = new System.Windows.Forms.Padding(4);
             this.lvMoneyTypes.Name = "lvMoneyTypes";
-            this.lvMoneyTypes.Size = new System.Drawing.Size(806, 192);
+            this.lvMoneyTypes.Size = new System.Drawing.Size(1073, 235);
             this.lvMoneyTypes.TabIndex = 2;
             this.lvMoneyTypes.UseCompatibleStateImageBehavior = false;
             this.lvMoneyTypes.View = System.Windows.Forms.View.Details;
@@ -218,9 +228,10 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 10);
+            this.label2.Location = new System.Drawing.Point(13, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 20);
+            this.label2.Size = new System.Drawing.Size(149, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Bảng giá phòng";
             // 
@@ -230,10 +241,11 @@
             this.panel5.Controls.Add(this.dgvMember);
             this.panel5.Controls.Add(this.lbMember);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 94);
+            this.panel5.Location = new System.Drawing.Point(4, 116);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(10);
-            this.panel5.Size = new System.Drawing.Size(826, 128);
+            this.panel5.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.panel5.Size = new System.Drawing.Size(1101, 157);
             this.panel5.TabIndex = 4;
             // 
             // btnAddMember
@@ -241,9 +253,10 @@
             this.btnAddMember.FlatAppearance.BorderSize = 0;
             this.btnAddMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMember.Image = global::QuanLyNhaChoThue.Properties.Resources.add_user_25px;
-            this.btnAddMember.Location = new System.Drawing.Point(94, 0);
+            this.btnAddMember.Location = new System.Drawing.Point(125, 0);
+            this.btnAddMember.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Size = new System.Drawing.Size(37, 32);
+            this.btnAddMember.Size = new System.Drawing.Size(49, 39);
             this.btnAddMember.TabIndex = 3;
             this.btnAddMember.UseVisualStyleBackColor = true;
             this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
@@ -257,10 +270,12 @@
             this.dgvMember.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMember.BackgroundColor = System.Drawing.Color.White;
             this.dgvMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMember.Location = new System.Drawing.Point(10, 43);
+            this.dgvMember.Location = new System.Drawing.Point(13, 53);
+            this.dgvMember.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMember.Name = "dgvMember";
+            this.dgvMember.RowHeadersWidth = 51;
             this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMember.Size = new System.Drawing.Size(806, 72);
+            this.dgvMember.Size = new System.Drawing.Size(1075, 88);
             this.dgvMember.TabIndex = 2;
             this.dgvMember.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellDoubleClick);
             // 
@@ -269,9 +284,10 @@
             this.lbMember.AutoSize = true;
             this.lbMember.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMember.Location = new System.Drawing.Point(10, 10);
+            this.lbMember.Location = new System.Drawing.Point(13, 12);
+            this.lbMember.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMember.Name = "lbMember";
-            this.lbMember.Size = new System.Drawing.Size(86, 20);
+            this.lbMember.Size = new System.Drawing.Size(110, 25);
             this.lbMember.TabIndex = 1;
             this.lbMember.Text = "Thành viên";
             // 
@@ -284,7 +300,7 @@
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Margin = new System.Windows.Forms.Padding(0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(832, 40);
+            this.panelTitle.Size = new System.Drawing.Size(1109, 49);
             this.panelTitle.TabIndex = 5;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
@@ -293,9 +309,10 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.btnClose);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 5);
+            this.panel6.Location = new System.Drawing.Point(0, 6);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(832, 35);
+            this.panel6.Size = new System.Drawing.Size(1109, 43);
             this.panel6.TabIndex = 3;
             this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseDown);
             // 
@@ -306,9 +323,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(300, 5);
+            this.label3.Location = new System.Drawing.Point(400, 6);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 24);
+            this.label3.Size = new System.Drawing.Size(237, 29);
             this.label3.TabIndex = 0;
             this.label3.Text = "Thông tin về phòng";
             this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label3_MouseDown);
@@ -319,9 +337,10 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::QuanLyNhaChoThue.Properties.Resources.delete_25px;
-            this.btnClose.Location = new System.Drawing.Point(787, 0);
+            this.btnClose.Location = new System.Drawing.Point(1049, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 35);
+            this.btnClose.Size = new System.Drawing.Size(60, 43);
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -335,17 +354,18 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(832, 5);
+            this.panel2.Size = new System.Drawing.Size(1109, 6);
             this.panel2.TabIndex = 2;
             // 
             // FormRoomInfor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 683);
+            this.ClientSize = new System.Drawing.Size(1109, 841);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(832, 654);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1109, 805);
             this.Name = "FormRoomInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin chi tiết về phòng";

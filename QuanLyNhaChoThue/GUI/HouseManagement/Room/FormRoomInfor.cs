@@ -41,6 +41,11 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             LoadMember(roomDTO.Id);
             LoadMoneyTypes();
             LoadBill();
+            dgvMember.AllowUserToAddRows = false;
+            dgvBill.AllowUserToAddRows = false;
+            dgvMember.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvMember.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvMember.Columns[5].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
         private void LoadBill()
         {
@@ -62,7 +67,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             dgvBill.Columns["ModifiedBy"].Visible = false; 
             dgvBill.Columns[12].HeaderCell.Value = "Tổng tiền";
             dgvBill.Columns[14].HeaderCell.Value = "Ngày tạo";
-            dgvBill.Columns[15].HeaderCell.Value = "Ngày cập nhật";
+            dgvBill.Columns[15].HeaderCell.Value = "Ngày đóng tiền";
             dgvBill.Columns[16].HeaderCell.Value = "Trạng thái";
            
         }

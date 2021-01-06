@@ -14,7 +14,6 @@ namespace QuanLyNhaChoThue.BLL
         UserBLL userBll = new UserBLL();
         public bool Insert(BillDTO billDTO)
         {
-            billDTO.MemberName = "";
             RoomDTO roomDTO = new RoomDTO();
             roomDTO = roomBll.findOne(billDTO.RoomId);
             billDTO.RoomMoney = roomDTO.RoomMoney;
@@ -74,6 +73,19 @@ namespace QuanLyNhaChoThue.BLL
                 billDTO.NetworkMoney + billDTO.OtherMoney;
             billDTO.CreatedDate = DateTime.Now;
 
+            List<UserDTO> listUser = userBll.FindMemBer(billDTO.RoomId);
+
+            StringBuilder memberName = new StringBuilder("");
+            for (int i = 0; i < listUser.Count; i++)
+            {
+                memberName.Append(listUser[i].FullName);
+                if (i != listUser.Count - 1)
+                {
+                    memberName.Append(", ");
+                }
+            }
+            billDTO.MemberName = memberName.ToString();
+            
             StringBuilder sql = new StringBuilder("insert into Bill ");
             sql.Append("(RoomId,MemberName,RoomMoney,ElectricMoney,");
             sql.Append("WaterMoney,NetworkMoney,OtherMoney,LastElectricNumber,");
@@ -85,7 +97,7 @@ namespace QuanLyNhaChoThue.BLL
                 billDTO.RoomMoney,billDTO.ElectricMoney,billDTO.WaterMoney,
                 billDTO.NetworkMoney,billDTO.OtherMoney,billDTO.LastElectricNumber,
                 billDTO.ElectricNumber,billDTO.LastWaterNumber,billDTO.WaterNumber,
-                billDTO.TotalMoney,"LUU MINH",billDTO.CreatedDate,0);
+                billDTO.TotalMoney,"Lưu Bá Minh",billDTO.CreatedDate,0);
         }
     
         public DataTable FindByRoomId(int roomId)
@@ -98,26 +110,34 @@ namespace QuanLyNhaChoThue.BLL
         {
             string sql = "select * from Bill where Id = " + id;
             DataTable dt = dal.Query(sql);
-            BillDTO dto = new BillDTO();
-            dto.Id = int.Parse(dt.Rows[0].ItemArray[0].ToString());
-            dto.RoomId = int.Parse(dt.Rows[0].ItemArray[1].ToString());
-            dto.MemberName = dt.Rows[0].ItemArray[2].ToString();
-            dto.RoomMoney = int.Parse(dt.Rows[0].ItemArray[3].ToString());
-            dto.ElectricMoney = int.Parse(dt.Rows[0].ItemArray[4].ToString());
-            dto.WaterMoney = int.Parse(dt.Rows[0].ItemArray[5].ToString());
-            dto.NetworkMoney = int.Parse(dt.Rows[0].ItemArray[6].ToString());
-            dto.OtherMoney = int.Parse(dt.Rows[0].ItemArray[7].ToString());
-            dto.LastElectricNumber = int.Parse(dt.Rows[0].ItemArray[8].ToString());
-            dto.ElectricNumber = int.Parse(dt.Rows[0].ItemArray[9].ToString());
-            dto.LastWaterNumber = int.Parse(dt.Rows[0].ItemArray[10].ToString());
-            dto.WaterNumber = int.Parse(dt.Rows[0].ItemArray[11].ToString());
-            dto.TotalMoney = int.Parse(dt.Rows[0].ItemArray[12].ToString());
-            dto.ModifiedBy = dt.Rows[0].ItemArray[13].ToString();
-            dto.CreatedDate = DateTime.Parse(dt.Rows[0].ItemArray[14].ToString());
-            //dto.ModifiedDate = DateTime.Parse(dt.Rows[0].ItemArray[15].ToString());
-            dto.Status = bool.Parse(dt.Rows[0].ItemArray[16].ToString());
+            try
+            {
+                BillDTO dto = new BillDTO();
+                dto.Id = int.Parse(dt.Rows[0].ItemArray[0].ToString());
+                dto.RoomId = int.Parse(dt.Rows[0].ItemArray[1].ToString());
+                dto.MemberName = dt.Rows[0].ItemArray[2].ToString();
+                dto.RoomMoney = int.Parse(dt.Rows[0].ItemArray[3].ToString());
+                dto.ElectricMoney = int.Parse(dt.Rows[0].ItemArray[4].ToString());
+                dto.WaterMoney = int.Parse(dt.Rows[0].ItemArray[5].ToString());
+                dto.NetworkMoney = int.Parse(dt.Rows[0].ItemArray[6].ToString());
+                dto.OtherMoney = int.Parse(dt.Rows[0].ItemArray[7].ToString());
+                dto.LastElectricNumber = int.Parse(dt.Rows[0].ItemArray[8].ToString());
+                dto.ElectricNumber = int.Parse(dt.Rows[0].ItemArray[9].ToString());
+                dto.LastWaterNumber = int.Parse(dt.Rows[0].ItemArray[10].ToString());
+                dto.WaterNumber = int.Parse(dt.Rows[0].ItemArray[11].ToString());
+                dto.TotalMoney = int.Parse(dt.Rows[0].ItemArray[12].ToString());
+                dto.ModifiedBy = dt.Rows[0].ItemArray[13].ToString();
+                dto.CreatedDate = DateTime.Parse(dt.Rows[0].ItemArray[14].ToString());
+                //dto.ModifiedDate = DateTime.Parse(dt.Rows[0].ItemArray[15].ToString());
+                dto.Status = bool.Parse(dt.Rows[0].ItemArray[16].ToString());
 
-            return dto;
+                return dto;
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
+            
         }
         public bool UpdateStatus(int id)
         {
@@ -138,11 +158,8 @@ namespace QuanLyNhaChoThue.BLL
                 viewStatisticDTO.Count = int.Parse(dt.Rows[i].ItemArray[3].ToString());
                 result.Add(viewStatisticDTO);
             }
-
             return result;
         }
-
-
 
     }
 }

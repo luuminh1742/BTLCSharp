@@ -168,11 +168,11 @@ select * from Bill
 alter view View_Statistic
 as
 	select u.UserName,b.Status
-	,convert(char(2),month(b.CreatedDate))+'-'+convert(char(4),year(b.CreatedDate))  as 'Date'
+	,convert(char(2),year(b.CreatedDate))+'-'+convert(char(4),month(b.CreatedDate))  as 'Date'
 	, count(b.Status) as 'Count'
 	from Bill as b inner join Room as r on b.RoomId = r.Id
 	inner join House as h on r.HouseId = h.Id
 	inner join Users as u on h.UserId = u.Id
-	group by convert(char(2),month(b.CreatedDate))+'-'+convert(char(4),year(b.CreatedDate)), b.Status,u.UserName
+	group by convert(char(2),year(b.CreatedDate))+'-'+convert(char(4),month(b.CreatedDate)), b.Status,u.UserName
 	
 select * from View_Statistic order by Date ,Status 

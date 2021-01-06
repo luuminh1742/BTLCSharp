@@ -22,12 +22,12 @@ namespace QuanLyNhaChoThue.BLL
                 user.Address = "";
                 user.Phone = "";
                 user.Id = int.Parse(dt.Rows[0].ItemArray[0].ToString());
-                user.UserName = dt.Rows[0].ItemArray[1].ToString();
-                user.Password = dt.Rows[0].ItemArray[2].ToString();
-                user.FullName = dt.Rows[0].ItemArray[3].ToString();
-                user.Gender = dt.Rows[0].ItemArray[4].ToString();
-                user.Address = dt.Rows[0].ItemArray[5].ToString();
-                user.Phone = dt.Rows[0].ItemArray[6].ToString();
+                user.UserName = dt.Rows[i].ItemArray[1].ToString();
+                user.Password = dt.Rows[i].ItemArray[2].ToString();
+                user.FullName = dt.Rows[i].ItemArray[3].ToString();
+                user.Gender = dt.Rows[i].ItemArray[4].ToString();
+                user.Address = dt.Rows[i].ItemArray[5].ToString();
+                user.Phone = dt.Rows[i].ItemArray[6].ToString();
                 results.Add(user);
             }
             return results;

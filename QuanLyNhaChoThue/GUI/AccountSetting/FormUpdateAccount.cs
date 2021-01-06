@@ -21,11 +21,11 @@ namespace QuanLyNhaChoThue.GUI.AccountSetting
         {
             InitializeComponent();
             user.Id = id;
-            user.UserName = username;
-            user.FullName = fullName;
-            user.Gender = gender;
-            user.Address = address;
-            user.Phone = phone;
+            user.UserName = username.Trim();
+            user.FullName = fullName.Trim();
+            user.Gender = gender.Trim();
+            user.Address = address.Trim();
+            user.Phone = phone.Trim();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

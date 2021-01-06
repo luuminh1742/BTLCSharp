@@ -9,6 +9,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
     public partial class FormCreateBill : Form
     {
         BillBLL billBll = new BillBLL();
+        RoomBLL roomBll = new RoomBLL();
         private int roomId;
         public FormCreateBill()
         {
@@ -23,6 +24,19 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
         private void FormCreateBill_Load(object sender, EventArgs e)
         {
             lblDateCreate.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            RoomDTO roomDTO = roomBll.findOne(roomId);
+            if(roomDTO.WaterMoneyType.Equals("Theo số công tơ"))
+            {
+                txtLastWater.Enabled = true;
+            }
+            else
+            {
+                txtLastWater.Enabled = false;
+            }
+            txtLastElectric.Text = roomDTO.LastElectricNumber.ToString();
+            txtLastWater.Text = roomDTO.LastWaterNumber.ToString();
+
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)

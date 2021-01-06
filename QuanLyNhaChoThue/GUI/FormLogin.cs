@@ -62,5 +62,10 @@ namespace QuanLyNhaChoThue.GUI
         {
             MoveItem.MouseDown(this);
         }
+
+        private void lbLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            MoveItem.MouseDown(this);
+        }
     }
 }
