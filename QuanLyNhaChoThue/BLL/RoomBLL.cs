@@ -78,5 +78,26 @@ namespace QuanLyNhaChoThue.BLL
             var roomDTO = ToList(dt)[0];
             return roomDTO;
         }
+
+        public bool CheckRoomName(int houseId,string roomName)
+        {
+            string sql = "select * from Room where HouseId = " +
+                houseId+" and RoomName = '"+roomName+"'";
+            DataTable dt = dal.Query(sql);
+            // Trả về true nếu tìm thấy phòng bị trùng tên
+            // Trả về false nếu không tìm thấy phòng trùng
+            return ToList(dt).Count != 0?true:false;
+        }
+        public bool CheckRoomName(int houseId, string roomNameOld, string roomNameNew)
+        {
+            string sql = "select * from Room where HouseId = " +
+                houseId + " and RoomName not in ('" + roomNameOld 
+                + "') and RoomName = '" + roomNameNew + "'";
+            DataTable dt = dal.Query(sql);
+            // Trả về true nếu tìm thấy phòng bị trùng tên
+            // Trả về false nếu không tìm thấy phòng trùng
+            return ToList(dt).Count != 0 ? true : false;
+        }
+
     }
 }

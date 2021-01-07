@@ -80,6 +80,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             int roomId = int.Parse(dgvRoom.Rows[row].Cells["Id"].Value.ToString());
             var formInforRoom = new FormRoomInfor(roomId);
             formInforRoom.ShowDialog();
+            LoadListRoom();
         }
 
         private void dgvHouseInfor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -90,7 +91,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             string description = dgvHouseInfor.Rows[row].Cells[3].Value.ToString();
             var formHouseEdit = new FormHouseEdit("EDIT",houseId,houseName,address,description);
             formHouseEdit.ShowDialog();
-            UC_RoomManager_Load(sender, e);
+            LoadHouse();
         }
 
         private void btnAddRoom_MouseHover(object sender, EventArgs e)

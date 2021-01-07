@@ -11,6 +11,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
         private int roomId = -1;
         private int houseId = -1;
         private string type = "";
+        private string roomNameOld = "";
         RoomBLL roomBll = new RoomBLL();
         public FormRoomEdit()
         {
@@ -70,15 +71,24 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
                 roomDTO.HouseId = houseId;
                 roomDTO.WaterMoneyType = cbbWaterMoneyType.Text;
                 roomDTO.NetworkMoneyType = cbbNetworkMoneyType.Text;
+
+                // Nếu tên phòng bị trùng thì thoát
+                if (roomBll.CheckRoomName(roomDTO.HouseId, roomDTO.RoomName))
+                {
+                    MessageBox.Show("Trùng tên phòng, bạn cần nhập lại tên phòng!", "Lỗi",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 if (roomBll.Insert(roomDTO))
                 {
-                    MessageBox.Show("Thêm phòng thành công", "Thông báo",
+                    MessageBox.Show("Thêm phòng thành công!", "Thông báo",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 else
                 {
-                    MessageBox.Show("Thêm phòng thất bại", "Thông báo",
+                    MessageBox.Show("Thêm phòng thất bại!", "Thông báo",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 this.Close();
@@ -86,7 +96,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             }
             catch (FormatException ex)
             {
-                MessageBox.Show("Lỗi nhập số", "Lỗi",
+                MessageBox.Show("Lỗi nhập số!", "Lỗi",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -110,15 +120,28 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
                 roomDTO.Description = txtDescription.Text.Trim();
                 roomDTO.WaterMoneyType = cbbWaterMoneyType.Text;
                 roomDTO.NetworkMoneyType = cbbNetworkMoneyType.Text;
+
+
+                // Nếu tên phòng bị trùng thì thoát
+                
+                if (!roomDTO.RoomName.Equals(roomNameOld) && 
+                    roomBll.CheckRoomName(roomDTO.HouseId, roomNameOld,roomDTO.RoomName))
+                {
+                    MessageBox.Show("Trùng tên phòng, bạn cần nhập lại tên phòng!", "Lỗi",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
                 if (roomBll.Update(roomDTO))
                 {
-                    MessageBox.Show("Cập nhật phòng thành công", "Thông báo",
+                    MessageBox.Show("Cập nhật phòng thành công!", "Thông báo",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật phòng thất bại", "Thông báo",
+                    MessageBox.Show("Cập nhật phòng thất bại!", "Thông báo",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 this.Close();
@@ -126,7 +149,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             }
             catch (FormatException ex)
             {
-                MessageBox.Show("Lỗi nhập số", "Lỗi",
+                MessageBox.Show("Lỗi nhập số!", "Lỗi",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -187,6 +210,8 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
                 txtNetworkMoney.Text = roomDTO.NetworkMoney.ToString();
                 txtOtherMoney.Text = roomDTO.OtherMoney.ToString();
                 txtDescription.Text = roomDTO.Description;
+                roomNameOld = roomDTO.RoomName;
+
             }
             else if (type.Equals("ADD"))
             {
