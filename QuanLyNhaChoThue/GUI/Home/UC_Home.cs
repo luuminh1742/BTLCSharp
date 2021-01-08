@@ -14,8 +14,13 @@ namespace QuanLyNhaChoThue.GUI.Home
         {
             InitializeComponent();
         }
-        private void fillChart()
+        public void fillChart()
         {
+            foreach (var series in chartstatistic.Series)
+            {
+                series.Points.Clear();
+            }
+            chartstatistic.Titles.Clear();
             chartstatistic.Titles.Add("Thống kê trạng thái hóa đơn của từng tháng");
             List<ViewStatisticDTO> list = billBll.StatisticBill(FormLogin.userName);
             StatisticUtil statisticUtil = new StatisticUtil();

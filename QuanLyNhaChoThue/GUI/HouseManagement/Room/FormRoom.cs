@@ -46,6 +46,7 @@ namespace QuanLyNhaChoThue.GUI.HouseManagement.Room
             SidePanel.Height = btnHome.Height;
             SidePanel.Top = btnHome.Top;
             uC_Home1.BringToFront();
+            uC_Home1.fillChart();
         }
 
         private void ShowFormMain()
